@@ -4,5 +4,5 @@ package shared
 
 // APIEvaluateRulesResponse - OK
 type APIEvaluateRulesResponse struct {
-	Results []APIEvaluationResult `json:"results,omitempty"`
+	Results []ModelsEvaluationResult `json:"results,omitempty"`
 }

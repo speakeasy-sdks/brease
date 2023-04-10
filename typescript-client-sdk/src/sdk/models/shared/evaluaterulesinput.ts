@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { ApiRule } from "./apirule";
+import { ModelsRule } from "./modelsrule";
 import { Expose, Type } from "class-transformer";
 
 export class EvaluateRulesInput extends SpeakeasyBase {
@@ -15,8 +15,8 @@ export class EvaluateRulesInput extends SpeakeasyBase {
   @Expose({ name: "overrideCode" })
   overrideCode?: string;
 
-  @SpeakeasyMetadata({ elemType: ApiRule })
+  @SpeakeasyMetadata({ elemType: ModelsRule })
   @Expose({ name: "overrideRules" })
-  @Type(() => ApiRule)
-  overrideRules?: ApiRule[];
+  @Type(() => ModelsRule)
+  overrideRules?: ModelsRule[];
 }

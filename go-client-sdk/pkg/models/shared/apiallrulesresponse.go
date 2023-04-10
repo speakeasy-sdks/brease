@@ -4,6 +4,6 @@ package shared
 
 // APIAllRulesResponse - OK
 type APIAllRulesResponse struct {
-	Code  *string   `json:"code,omitempty"`
-	Rules []APIRule `json:"rules,omitempty"`
+	Code  *string      `json:"code,omitempty"`
+	Rules []ModelsRule `json:"rules,omitempty"`
 }

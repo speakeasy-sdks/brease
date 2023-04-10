@@ -3,5 +3,5 @@
 package shared
 
 type AddRuleInput struct {
-	Rule *APIRule `json:"rule,omitempty"`
+	Rule *ModelsRule `json:"rule,omitempty"`
 }

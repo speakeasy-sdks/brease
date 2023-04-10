@@ -4,5 +4,5 @@ package shared
 
 // APIAddRuleResponse - OK
 type APIAddRuleResponse struct {
-	Rule *APIRule `json:"rule,omitempty"`
+	Rule *ModelsRule `json:"rule,omitempty"`
 }

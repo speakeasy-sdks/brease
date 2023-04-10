@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apirule as shared_apirule
+from ..shared import modelsrule as shared_modelsrule
 from dataclasses_json import Undefined, dataclass_json
 from sdk import utils
 from typing import Optional
@@ -13,5 +13,5 @@ from typing import Optional
 class APIReplaceRuleResponse:
     r"""OK"""
     
-    rule: Optional[shared_apirule.APIRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule'), 'exclude': lambda f: f is None }})  
+    rule: Optional[shared_modelsrule.ModelsRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule'), 'exclude': lambda f: f is None }})  
     

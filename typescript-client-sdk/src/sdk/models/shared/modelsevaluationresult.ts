@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export class ApiEvaluationResult extends SpeakeasyBase {
+export class ModelsEvaluationResult extends SpeakeasyBase {
   @SpeakeasyMetadata()
   @Expose({ name: "Value" })
   value?: string;

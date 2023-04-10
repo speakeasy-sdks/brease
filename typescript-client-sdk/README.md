@@ -23,6 +23,9 @@ import {
   AddRuleRequest,
   AddRuleResponse
 } from "brease-sdk/dist/sdk/models/operations";
+import {
+  ConditionTypeEnum,
+} from "brease-sdk/dist/sdk/models/shared";
 
 import { AxiosError } from "axios";
 import { SDK } from "brease-sdk";
@@ -34,17 +37,26 @@ const req: AddRuleRequest = {
       action: "corrupti",
       description: "provident",
       expression: {
-        "quibusdam": "unde",
-        "nulla": "corrupti",
-        "illum": "vel",
+        condition: {
+          base: {
+            ref: {
+              dst: "unde",
+              src: "nulla",
+            },
+          },
+          parameter: false,
+          type: ConditionTypeEnum.Rgx,
+        },
       },
-      id: "error",
-      target: "deserunt",
-      targetType: "suscipit",
-      targetValue: "iure",
+      id: "vel",
+      target: {
+        target: "error",
+        targetValue: "deserunt",
+        type: "suscipit",
+      },
     },
   },
-  contextID: "magnam",
+  contextID: "iure",
 };
 
 sdk.contextID.addRule(req).then((res: AddRuleResponse | AxiosError) => {

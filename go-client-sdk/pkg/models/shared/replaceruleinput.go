@@ -3,5 +3,5 @@
 package shared
 
 type ReplaceRuleInput struct {
-	Rule APIRule `json:"rule"`
+	Rule ModelsRule `json:"rule"`
 }

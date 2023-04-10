@@ -3,15 +3,15 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { ApiEvaluationResult } from "./apievaluationresult";
+import { ModelsEvaluationResult } from "./modelsevaluationresult";
 import { Expose, Type } from "class-transformer";
 
 /**
  * OK
  */
 export class ApiEvaluateRulesResponse extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: ApiEvaluationResult })
+  @SpeakeasyMetadata({ elemType: ModelsEvaluationResult })
   @Expose({ name: "results" })
-  @Type(() => ApiEvaluationResult)
-  results?: ApiEvaluationResult[];
+  @Type(() => ModelsEvaluationResult)
+  results?: ModelsEvaluationResult[];
 }

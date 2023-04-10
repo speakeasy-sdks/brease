@@ -14,8 +14,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApiEvaluateRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
-    public ApiEvaluationResult[] results;
-    public ApiEvaluateRulesResponse withResults(ApiEvaluationResult[] results) {
+    public ModelsEvaluationResult[] results;
+    public ApiEvaluateRulesResponse withResults(ModelsEvaluationResult[] results) {
         this.results = results;
         return this;
     }

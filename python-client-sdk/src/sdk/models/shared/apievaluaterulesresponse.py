@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apievaluationresult as shared_apievaluationresult
+from ..shared import modelsevaluationresult as shared_modelsevaluationresult
 from dataclasses_json import Undefined, dataclass_json
 from sdk import utils
 from typing import Optional
@@ -13,5 +13,5 @@ from typing import Optional
 class APIEvaluateRulesResponse:
     r"""OK"""
     
-    results: Optional[list[shared_apievaluationresult.APIEvaluationResult]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('results'), 'exclude': lambda f: f is None }})  
+    results: Optional[list[shared_modelsevaluationresult.ModelsEvaluationResult]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('results'), 'exclude': lambda f: f is None }})  
     

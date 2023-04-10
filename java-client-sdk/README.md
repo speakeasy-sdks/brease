@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'industries.dot.brease:brease-sdk:1.0.0'
+implementation 'industries.dot.brease:brease-sdk:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -21,7 +21,20 @@ import industries.dot.brease.models.operations.AddRuleSecurity;
 import industries.dot.brease.models.operations.AddRuleRequest;
 import industries.dot.brease.models.operations.AddRuleResponse;
 import industries.dot.brease.models.shared.AddRuleInput;
-import industries.dot.brease.models.shared.ApiRule;
+import industries.dot.brease.models.shared.ModelsRuleExpression3;
+import industries.dot.brease.models.shared.ModelsRuleExpression2;
+import industries.dot.brease.models.shared.ModelsRuleExpression1;
+import industries.dot.brease.models.shared.ModelsRule;
+import industries.dot.brease.models.shared.ModelsTarget;
+import industries.dot.brease.models.shared.ExpressionArrayExpression3;
+import industries.dot.brease.models.shared.ExpressionArrayExpression2;
+import industries.dot.brease.models.shared.ExpressionArrayExpression1;
+import industries.dot.brease.models.shared.ExpressionArray;
+import industries.dot.brease.models.shared.ConditionBase2;
+import industries.dot.brease.models.shared.Condition;
+import industries.dot.brease.models.shared.ConditionTypeEnum;
+import industries.dot.brease.models.shared.ConditionBaseKey;
+import industries.dot.brease.models.shared.ConditionBaseRef;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,21 +44,30 @@ public class Application {
 
             AddRuleRequest req = new AddRuleRequest() {{
                 addRuleInput = new AddRuleInput() {{
-                    rule = new ApiRule() {{
+                    rule = new ModelsRule() {{
                         action = "corrupti";
                         description = "provident";
-                        expression = new java.util.HashMap<String, Object>() {{
-                            put("quibusdam", "unde");
-                            put("nulla", "corrupti");
-                            put("illum", "vel");
+                        expression = new ModelsRuleExpression3() {{
+                            condition = new Condition() {{
+                                base = new ConditionBase2() {{
+                                    ref = new ConditionBaseRef() {{
+                                        dst = "unde";
+                                        src = "nulla";
+                                    }};
+                                }};
+                                parameter = false;
+                                type = "rgx";
+                            }};
                         }};
-                        id = "error";
-                        target = "deserunt";
-                        targetType = "suscipit";
-                        targetValue = "iure";
+                        id = "vel";
+                        target = new ModelsTarget() {{
+                            target = "error";
+                            targetValue = "deserunt";
+                            type = "suscipit";
+                        }};
                     }};
                 }};
-                contextID = "magnam";
+                contextID = "iure";
             }}            
 
             AddRuleResponse res = sdk.contextID.addRule(req, new AddRuleSecurity() {{

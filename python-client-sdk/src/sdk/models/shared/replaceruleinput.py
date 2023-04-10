@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import apirule as shared_apirule
+from ..shared import modelsrule as shared_modelsrule
 from dataclasses_json import Undefined, dataclass_json
 from sdk import utils
 
@@ -11,5 +11,5 @@ from sdk import utils
 @dataclasses.dataclass
 class ReplaceRuleInput:
     
-    rule: shared_apirule.APIRule = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule') }})  
+    rule: shared_modelsrule.ModelsRule = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule') }})  
     

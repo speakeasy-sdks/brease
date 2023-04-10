@@ -4,5 +4,5 @@ package shared
 
 // APIReplaceRuleResponse - OK
 type APIReplaceRuleResponse struct {
-	Rule *APIRule `json:"rule,omitempty"`
+	Rule *ModelsRule `json:"rule,omitempty"`
 }

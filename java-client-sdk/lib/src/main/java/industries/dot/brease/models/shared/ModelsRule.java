@@ -8,10 +8,10 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class ApiRule {
+public class ModelsRule {
     @JsonProperty("action")
     public String action;
-    public ApiRule withAction(String action) {
+    public ModelsRule withAction(String action) {
         this.action = action;
         return this;
     }
@@ -19,44 +19,29 @@ public class ApiRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
-    public ApiRule withDescription(String description) {
+    public ModelsRule withDescription(String description) {
         this.description = description;
         return this;
     }
     
     @JsonProperty("expression")
-    public java.util.Map<String, Object> expression;
-    public ApiRule withExpression(java.util.Map<String, Object> expression) {
+    public Object expression;
+    public ModelsRule withExpression(Object expression) {
         this.expression = expression;
         return this;
     }
     
     @JsonProperty("id")
     public String id;
-    public ApiRule withId(String id) {
+    public ModelsRule withId(String id) {
         this.id = id;
         return this;
     }
     
     @JsonProperty("target")
-    public String target;
-    public ApiRule withTarget(String target) {
+    public ModelsTarget target;
+    public ModelsRule withTarget(ModelsTarget target) {
         this.target = target;
-        return this;
-    }
-    
-    @JsonProperty("targetType")
-    public String targetType;
-    public ApiRule withTargetType(String targetType) {
-        this.targetType = targetType;
-        return this;
-    }
-    
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("targetValue")
-    public String targetValue;
-    public ApiRule withTargetValue(String targetValue) {
-        this.targetValue = targetValue;
         return this;
     }
     

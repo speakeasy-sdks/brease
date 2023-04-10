@@ -11,8 +11,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddRuleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
-    public ApiRule rule;
-    public AddRuleInput withRule(ApiRule rule) {
+    public ModelsRule rule;
+    public AddRuleInput withRule(ModelsRule rule) {
         this.rule = rule;
         return this;
     }

@@ -26,8 +26,8 @@ public class EvaluateRulesInput {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideRules")
-    public ApiRule[] overrideRules;
-    public EvaluateRulesInput withOverrideRules(ApiRule[] overrideRules) {
+    public ModelsRule[] overrideRules;
+    public EvaluateRulesInput withOverrideRules(ModelsRule[] overrideRules) {
         this.overrideRules = overrideRules;
         return this;
     }

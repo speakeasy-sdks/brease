@@ -22,8 +22,8 @@ public class ApiAllRulesResponse {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
-    public ApiRule[] rules;
-    public ApiAllRulesResponse withRules(ApiRule[] rules) {
+    public ModelsRule[] rules;
+    public ApiAllRulesResponse withRules(ModelsRule[] rules) {
         this.rules = rules;
         return this;
     }

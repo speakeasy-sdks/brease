@@ -26,21 +26,19 @@ func main() {
 
     req := operations.AddRuleRequest{
         AddRuleInput: &shared.AddRuleInput{
-            Rule: &shared.APIRule{
+            Rule: &shared.ModelsRule{
                 Action: "corrupti",
                 Description: "provident",
-                Expression: map[string]interface{}{
-                    "quibusdam": "unde",
-                    "nulla": "corrupti",
-                    "illum": "vel",
+                Expression: shared.Expression{},
+                ID: "distinctio",
+                Target: shared.ModelsTarget{
+                    Target: "quibusdam",
+                    TargetValue: "unde",
+                    Type: "nulla",
                 },
-                ID: "error",
-                Target: "deserunt",
-                TargetType: "suscipit",
-                TargetValue: "iure",
             },
         },
-        ContextID: "magnam",
+        ContextID: "corrupti",
     }
 
     ctx := context.Background()

@@ -8,21 +8,30 @@ s = sdk.SDK()
 
 req = operations.AddRuleRequest(
     add_rule_input=shared.AddRuleInput(
-        rule=shared.APIRule(
+        rule=shared.ModelsRule(
             action="corrupti",
             description="provident",
-            expression={
-                "quibusdam": "unde",
-                "nulla": "corrupti",
-                "illum": "vel",
-            },
-            id="error",
-            target="deserunt",
-            target_type="suscipit",
-            target_value="iure",
+            expression=shared.ModelsRuleExpression3(
+                condition=shared.Condition(
+                    base=shared.ConditionBase2(
+                        ref=shared.ConditionBaseRef(
+                            dst="unde",
+                            src="nulla",
+                        ),
+                    ),
+                    parameter=False,
+                    type="rgx",
+                ),
+            ),
+            id="vel",
+            target=shared.ModelsTarget(
+                target="error",
+                target_value="deserunt",
+                type="suscipit",
+            ),
         ),
     ),
-    context_id="magnam",
+    context_id="iure",
 )
     
 res = s.context_id.add_rule(req, operations.AddRuleSecurity(

@@ -5,5 +5,5 @@ package shared
 type EvaluateRulesInput struct {
 	Object        map[string]interface{} `json:"object"`
 	OverrideCode  *string                `json:"overrideCode,omitempty"`
-	OverrideRules []APIRule              `json:"overrideRules,omitempty"`
+	OverrideRules []ModelsRule           `json:"overrideRules,omitempty"`
 }

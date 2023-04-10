@@ -8,8 +8,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ReplaceRuleInput {
     @JsonProperty("rule")
-    public ApiRule rule;
-    public ReplaceRuleInput withRule(ApiRule rule) {
+    public ModelsRule rule;
+    public ReplaceRuleInput withRule(ModelsRule rule) {
         this.rule = rule;
         return this;
     }

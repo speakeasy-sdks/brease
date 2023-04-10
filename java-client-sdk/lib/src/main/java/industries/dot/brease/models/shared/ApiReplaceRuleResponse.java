@@ -14,8 +14,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApiReplaceRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
-    public ApiRule rule;
-    public ApiReplaceRuleResponse withRule(ApiRule rule) {
+    public ModelsRule rule;
+    public ApiReplaceRuleResponse withRule(ModelsRule rule) {
         this.rule = rule;
         return this;
     }

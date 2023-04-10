@@ -2,7 +2,7 @@
 
 package shared
 
-type APIEvaluationResult struct {
+type ModelsEvaluationResult struct {
 	Value            *string `json:"Value,omitempty"`
 	Action           *string `json:"action,omitempty"`
 	ActionTargetType *string `json:"actionTargetType,omitempty"`

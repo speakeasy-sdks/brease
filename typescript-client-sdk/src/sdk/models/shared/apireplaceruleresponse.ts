@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { ApiRule } from "./apirule";
+import { ModelsRule } from "./modelsrule";
 import { Expose, Type } from "class-transformer";
 
 /**
@@ -12,6 +12,6 @@ import { Expose, Type } from "class-transformer";
 export class ApiReplaceRuleResponse extends SpeakeasyBase {
   @SpeakeasyMetadata()
   @Expose({ name: "rule" })
-  @Type(() => ApiRule)
-  rule?: ApiRule;
+  @Type(() => ModelsRule)
+  rule?: ModelsRule;
 }
