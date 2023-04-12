@@ -24,6 +24,7 @@ import (
 func main() {
     s := sdk.New()
 
+    ctx := context.Background()    
     req := operations.AddRuleRequest{
         AddRuleInput: &shared.AddRuleInput{
             Rule: &shared.ModelsRule{
@@ -41,7 +42,6 @@ func main() {
         ContextID: "corrupti",
     }
 
-    ctx := context.Background()
     res, err := s.ContextID.AddRule(ctx, req, operations.AddRuleSecurity{
         APIToken: "Bearer YOUR_BEARER_TOKEN_HERE",
     })

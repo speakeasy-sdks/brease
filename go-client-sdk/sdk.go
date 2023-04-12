@@ -71,7 +71,7 @@ func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
 		_language:   "go",
 		_sdkVersion: "0.0.1",
-		_genVersion: "2.17.8",
+		_genVersion: "2.17.9",
 	}
 	for _, opt := range opts {
 		opt(sdk)

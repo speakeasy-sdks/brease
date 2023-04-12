@@ -66,6 +66,7 @@ export class ContextID {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
+
     if (!(security instanceof utils.SpeakeasyBase)) {
       security = new operations.AddRuleSecurity(security);
     }
@@ -97,7 +98,7 @@ export class ContextID {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.apiAddRuleResponse = utils.deserializeJSONResponse(
+            res.apiAddRuleResponse = utils.objectToClass(
               httpRes?.data,
               shared.ApiAddRuleResponse
             );
@@ -141,6 +142,7 @@ export class ContextID {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
+
     if (!(security instanceof utils.SpeakeasyBase)) {
       security = new operations.EvaluateRulesSecurity(security);
     }
@@ -173,7 +175,7 @@ export class ContextID {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.apiEvaluateRulesResponse = utils.deserializeJSONResponse(
+            res.apiEvaluateRulesResponse = utils.objectToClass(
               httpRes?.data,
               shared.ApiEvaluateRulesResponse
             );
@@ -199,6 +201,7 @@ export class ContextID {
 
     const baseURL: string = this._serverURL;
     const url: string = utils.generateURL(baseURL, "/{contextID}/rules", req);
+
     if (!(security instanceof utils.SpeakeasyBase)) {
       security = new operations.GetAllRulesSecurity(security);
     }
@@ -227,7 +230,7 @@ export class ContextID {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.apiAllRulesResponse = utils.deserializeJSONResponse(
+            res.apiAllRulesResponse = utils.objectToClass(
               httpRes?.data,
               shared.ApiAllRulesResponse
             );
@@ -257,6 +260,7 @@ export class ContextID {
       "/{contextID}/rules/{id}",
       req
     );
+
     if (!(security instanceof utils.SpeakeasyBase)) {
       security = new operations.RemoveRuleSecurity(security);
     }
@@ -323,6 +327,7 @@ export class ContextID {
         throw new Error(`Error serializing request body, cause: ${e.message}`);
       }
     }
+
     if (!(security instanceof utils.SpeakeasyBase)) {
       security = new operations.ReplaceRuleSecurity(security);
     }
@@ -355,7 +360,7 @@ export class ContextID {
       switch (true) {
         case httpRes?.status == 200:
           if (utils.matchContentType(contentType, `application/json`)) {
-            res.apiReplaceRuleResponse = utils.deserializeJSONResponse(
+            res.apiReplaceRuleResponse = utils.objectToClass(
               httpRes?.data,
               shared.ApiReplaceRuleResponse
             );
