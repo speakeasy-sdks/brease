@@ -1,5 +1,10 @@
 name: Generate
 
+permissions:
+  checks: write
+  contents: write
+  statuses: write
+
 on:
   workflow_dispatch:
     inputs:
@@ -19,14 +24,15 @@ jobs:
       openapi_doc_location: https://prod.speakeasyapi.dev/v1/apis/brease/version/0.1/schema/download
       openapi_doc_auth_header: x-api-key
       languages: |-
-        - typescript: typescript-client-sdk
-        - go: go-client-sdk
         - java: java-client-sdk
         - python: python-client-sdk
-      publish_typescript: true
+        - typescript: typescript-client-sdk
+        - go: go-client-sdk
       publish_python: true
-      mode: pr
+      publish_typescript: true
     secrets:
       speakeasy_api_key: ${{ secrets.SPEAKEASY_PROD_API_KEY }}
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
+      pypi_token: ${{ secrets.PYPI_TOKEN }}
+      npm_token: ${{ secrets.NPM_TOKEN }}
       openapi_doc_auth_token: ${{ secrets.SPEAKEASY_API_KEY }}
