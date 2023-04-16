@@ -1,11 +1,16 @@
 configVersion: 1.0.0
+management:
+  docChecksum: 14e7c80664b52eb481cd009ed4abfd0f
+  docVersion: 0.1.0
+  speakeasyVersion: 1.20.0
+  generationVersion: 2.18.0
 generation:
   telemetryEnabled: false
   sdkClassName: SDK
-  sdkFlattening: true
+  sdkFlattening: false
   singleTagPerOp: false
 go:
-  version: ""
+  version: 1.0.0
   packageName: brease
 java:
   version: ""
