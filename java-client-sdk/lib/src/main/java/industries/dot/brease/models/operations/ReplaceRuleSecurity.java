@@ -4,6 +4,7 @@
 
 package industries.dot.brease.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import industries.dot.brease.utils.SpeakeasyMetadata;
 
 public class ReplaceRuleSecurity {
@@ -14,4 +15,8 @@ public class ReplaceRuleSecurity {
         return this;
     }
     
+
+    public ReplaceRuleSecurity(@JsonProperty("apiToken") String apiToken) {
+    this.apiToken = apiToken;
+  }
 }

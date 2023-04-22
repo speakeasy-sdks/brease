@@ -4,6 +4,7 @@
 
 package industries.dot.brease.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import industries.dot.brease.utils.SpeakeasyMetadata;
 
 public class AddRuleRequest {
@@ -21,4 +22,8 @@ public class AddRuleRequest {
         return this;
     }
     
+
+    public AddRuleRequest(@JsonProperty("contextID") String contextID) {
+    this.contextID = contextID;
+  }
 }

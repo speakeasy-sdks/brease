@@ -17,4 +17,6 @@ public class ExpressionArrayExpression2 {
         return this;
     }
     
+
+    public ExpressionArrayExpression2(){}
 }

@@ -4,6 +4,7 @@
 
 package industries.dot.brease.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddRuleResponse {
@@ -38,4 +39,9 @@ public class AddRuleResponse {
         return this;
     }
     
+
+    public AddRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+    this.contentType = contentType;
+this.statusCode = statusCode;
+  }
 }

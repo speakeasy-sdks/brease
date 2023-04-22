@@ -57,11 +57,9 @@ public class ContextID {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        industries.dot.brease.models.operations.AddRuleResponse res = new industries.dot.brease.models.operations.AddRuleResponse() {{
+        industries.dot.brease.models.operations.AddRuleResponse res = new industries.dot.brease.models.operations.AddRuleResponse(contentType, httpRes.statusCode()) {{
             apiAddRuleResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class ContextID {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        industries.dot.brease.models.operations.EvaluateRulesResponse res = new industries.dot.brease.models.operations.EvaluateRulesResponse() {{
+        industries.dot.brease.models.operations.EvaluateRulesResponse res = new industries.dot.brease.models.operations.EvaluateRulesResponse(contentType, httpRes.statusCode()) {{
             apiEvaluateRulesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class ContextID {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        industries.dot.brease.models.operations.GetAllRulesResponse res = new industries.dot.brease.models.operations.GetAllRulesResponse() {{
+        industries.dot.brease.models.operations.GetAllRulesResponse res = new industries.dot.brease.models.operations.GetAllRulesResponse(contentType, httpRes.statusCode()) {{
             apiAllRulesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,10 +173,8 @@ public class ContextID {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        industries.dot.brease.models.operations.RemoveRuleResponse res = new industries.dot.brease.models.operations.RemoveRuleResponse() {{
+        industries.dot.brease.models.operations.RemoveRuleResponse res = new industries.dot.brease.models.operations.RemoveRuleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -215,11 +207,9 @@ public class ContextID {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        industries.dot.brease.models.operations.ReplaceRuleResponse res = new industries.dot.brease.models.operations.ReplaceRuleResponse() {{
+        industries.dot.brease.models.operations.ReplaceRuleResponse res = new industries.dot.brease.models.operations.ReplaceRuleResponse(contentType, httpRes.statusCode()) {{
             apiReplaceRuleResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

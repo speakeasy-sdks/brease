@@ -20,4 +20,6 @@ public class ApiEvaluateRulesResponse {
         return this;
     }
     
+
+    public ApiEvaluateRulesResponse(){}
 }

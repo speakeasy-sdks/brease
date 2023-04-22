@@ -28,4 +28,6 @@ public class ApiAllRulesResponse {
         return this;
     }
     
+
+    public ApiAllRulesResponse(){}
 }

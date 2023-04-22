@@ -4,6 +4,7 @@
 
 package industries.dot.brease.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import industries.dot.brease.utils.SpeakeasyMetadata;
 
 public class ReplaceRuleRequest {
@@ -28,4 +29,9 @@ public class ReplaceRuleRequest {
         return this;
     }
     
+
+    public ReplaceRuleRequest(@JsonProperty("contextID") String contextID, @JsonProperty("id") String id) {
+    this.contextID = contextID;
+this.id = id;
+  }
 }

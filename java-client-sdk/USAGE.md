@@ -29,35 +29,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AddRuleRequest req = new AddRuleRequest() {{
-                addRuleInput = new AddRuleInput() {{
-                    rule = new ModelsRule() {{
-                        action = "corrupti";
-                        description = "provident";
-                        expression = new ModelsRuleExpression3() {{
-                            condition = new Condition() {{
-                                base = new ConditionBase2() {{
-                                    ref = new ConditionBaseRef() {{
-                                        dst = "unde";
-                                        src = "nulla";
-                                    }};
-                                }};
-                                parameter = false;
-                                type = "rgx";
-                            }};
-                        }};
-                        id = "69a674e0-f467-4cc8-b96e-d151a05dfc2d";
-                        target = new ModelsTarget() {{
-                            target = "at";
-                            targetValue = "maiores";
-                            type = "molestiae";
-                        }};
-                    }};
-                }};
-                contextID = "quod";
-            }}            
+            AddRuleRequest req = new AddRuleRequest("corrupti");            
 
-            AddRuleResponse res = sdk.contextID.addRule(req, new AddRuleSecurity() {{
+            AddRuleResponse res = sdk.contextID.addRule(req, new AddRuleSecurity("magnam") {{
                 apiToken = "Bearer YOUR_BEARER_TOKEN_HERE";
             }});
 

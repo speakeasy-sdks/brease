@@ -20,4 +20,6 @@ public class ApiAddRuleResponse {
         return this;
     }
     
+
+    public ApiAddRuleResponse(){}
 }

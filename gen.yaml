@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 14e7c80664b52eb481cd009ed4abfd0f
   docVersion: 0.1.0
-  speakeasyVersion: 1.21.4
-  generationVersion: 2.19.1
+  speakeasyVersion: 1.22.1
+  generationVersion: 2.20.1
 generation:
   telemetryEnabled: false
   sdkClassName: SDK
@@ -12,7 +12,7 @@ go:
   version: 0.1.0
   packageName: brease
 java:
-  version: ""
+  version: 0.1.0
   artifactID: brease
   companyEmail: info@mycompany.com
   companyName: My Company

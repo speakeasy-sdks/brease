@@ -17,4 +17,6 @@ public class AddRuleInput {
         return this;
     }
     
+
+    public AddRuleInput(){}
 }
