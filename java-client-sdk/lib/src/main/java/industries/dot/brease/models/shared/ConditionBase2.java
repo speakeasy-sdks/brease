@@ -17,6 +17,5 @@ public class ConditionBase2 {
         return this;
     }
     
-
     public ConditionBase2(){}
 }

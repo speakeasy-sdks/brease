@@ -22,9 +22,8 @@ public class RemoveRuleRequest {
         return this;
     }
     
-
     public RemoveRuleRequest(@JsonProperty("contextID") String contextID, @JsonProperty("id") String id) {
-    this.contextID = contextID;
-this.id = id;
+        this.contextID = contextID;
+        this.id = id;
   }
 }

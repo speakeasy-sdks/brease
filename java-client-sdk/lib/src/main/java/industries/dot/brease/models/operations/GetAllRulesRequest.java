@@ -15,8 +15,7 @@ public class GetAllRulesRequest {
         return this;
     }
     
-
     public GetAllRulesRequest(@JsonProperty("contextID") String contextID) {
-    this.contextID = contextID;
+        this.contextID = contextID;
   }
 }

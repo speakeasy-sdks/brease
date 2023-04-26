@@ -17,6 +17,5 @@ public class ModelsRuleExpression3 {
         return this;
     }
     
-
     public ModelsRuleExpression3(){}
 }

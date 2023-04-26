@@ -45,11 +45,10 @@ public class ModelsRule {
         return this;
     }
     
-
     public ModelsRule(@JsonProperty("action") String action, @JsonProperty("expression") Object expression, @JsonProperty("id") String id, @JsonProperty("target") ModelsTarget target) {
-    this.action = action;
-this.expression = expression;
-this.id = id;
-this.target = target;
+        this.action = action;
+        this.expression = expression;
+        this.id = id;
+        this.target = target;
   }
 }

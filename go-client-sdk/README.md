@@ -13,12 +13,12 @@ go get github.com/speakeasy-sdks/brease/go-client-sdk
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "brease"
-    "brease/pkg/models/shared"
-    "brease/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"brease"
+	"brease/pkg/models/operations"
+	"brease/pkg/models/shared"
 )
 
 func main() {
@@ -29,12 +29,12 @@ func main() {
         AddRuleInput: &shared.AddRuleInput{
             Rule: &shared.ModelsRule{
                 Action: "corrupti",
-                Description: "provident",
+                Description: sdk.String("provident"),
                 Expression: shared.Expression{},
                 ID: "bd9d8d69-a674-4e0f-867c-c8796ed151a0",
                 Target: shared.ModelsTarget{
                     Target: "ipsam",
-                    TargetValue: "repellendus",
+                    TargetValue: sdk.String("repellendus"),
                     Type: "sapiente",
                 },
             },
@@ -60,13 +60,13 @@ func main() {
 ## Available Resources and Operations
 
 
-### ContextID
+### [ContextID](docs/contextid/README.md)
 
-* `AddRule` - Adds a new rule to the context
-* `EvaluateRules` - Evaluate rules within a context on the provided object
-* `GetAllRules` - Returns all rules with the context
-* `RemoveRule` - Removes a rule from the context
-* `ReplaceRule` - Replaces an existing rule within the context
+* [AddRule](docs/contextid/README.md#addrule) - Adds a new rule to the context
+* [EvaluateRules](docs/contextid/README.md#evaluaterules) - Evaluate rules within a context on the provided object
+* [GetAllRules](docs/contextid/README.md#getallrules) - Returns all rules with the context
+* [RemoveRule](docs/contextid/README.md#removerule) - Removes a rule from the context
+* [ReplaceRule](docs/contextid/README.md#replacerule) - Replaces an existing rule within the context
 <!-- End SDK Available Operations -->
 
 ### Maturity

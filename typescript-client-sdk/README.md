@@ -19,16 +19,11 @@ yarn add brease-sdk
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
 ```typescript
-import {
-  AddRuleRequest,
-  AddRuleResponse
-} from "brease-sdk/dist/sdk/models/operations";
-import {
-  ConditionTypeEnum,
-} from "brease-sdk/dist/sdk/models/shared";
-
 import { AxiosError } from "axios";
 import { SDK } from "brease-sdk";
+import { AddRuleRequest, AddRuleResponse } from "brease-sdk/dist/sdk/models/operations";
+import { ConditionTypeEnum } from "brease-sdk/dist/sdk/models/shared";
+
 const sdk = new SDK();
 
 const req: AddRuleRequest = {
@@ -60,7 +55,9 @@ const req: AddRuleRequest = {
 };
 
 sdk.contextID.addRule(req).then((res: AddRuleResponse | AxiosError) => {
-   // handle response
+  if (res instanceof UsageExamplePostResponse && res.statusCode == 200) {
+    // handle response
+  }
 });
 ```
 <!-- End SDK Example Usage -->
@@ -69,13 +66,13 @@ sdk.contextID.addRule(req).then((res: AddRuleResponse | AxiosError) => {
 ## Available Resources and Operations
 
 
-### contextID
+### [contextID](docs/contextid/README.md)
 
-* `addRule` - Adds a new rule to the context
-* `evaluateRules` - Evaluate rules within a context on the provided object
-* `getAllRules` - Returns all rules with the context
-* `removeRule` - Removes a rule from the context
-* `replaceRule` - Replaces an existing rule within the context
+* [addRule](docs/contextid/README.md#addrule) - Adds a new rule to the context
+* [evaluateRules](docs/contextid/README.md#evaluaterules) - Evaluate rules within a context on the provided object
+* [getAllRules](docs/contextid/README.md#getallrules) - Returns all rules with the context
+* [removeRule](docs/contextid/README.md#removerule) - Removes a rule from the context
+* [replaceRule](docs/contextid/README.md#replacerule) - Replaces an existing rule within the context
 <!-- End SDK Available Operations -->
 
 ### Maturity

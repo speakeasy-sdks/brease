@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "brease"
-    "brease/pkg/models/shared"
-    "brease/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"brease"
+	"brease/pkg/models/operations"
+	"brease/pkg/models/shared"
 )
 
 func main() {
@@ -18,12 +18,12 @@ func main() {
         AddRuleInput: &shared.AddRuleInput{
             Rule: &shared.ModelsRule{
                 Action: "corrupti",
-                Description: "provident",
+                Description: sdk.String("provident"),
                 Expression: shared.Expression{},
                 ID: "bd9d8d69-a674-4e0f-867c-c8796ed151a0",
                 Target: shared.ModelsTarget{
                     Target: "ipsam",
-                    TargetValue: "repellendus",
+                    TargetValue: sdk.String("repellendus"),
                     Type: "sapiente",
                 },
             },

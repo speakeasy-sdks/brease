@@ -15,8 +15,7 @@ public class RemoveRuleSecurity {
         return this;
     }
     
-
     public RemoveRuleSecurity(@JsonProperty("apiToken") String apiToken) {
-    this.apiToken = apiToken;
+        this.apiToken = apiToken;
   }
 }

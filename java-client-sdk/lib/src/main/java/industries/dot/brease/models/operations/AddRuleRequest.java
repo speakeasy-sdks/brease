@@ -22,8 +22,7 @@ public class AddRuleRequest {
         return this;
     }
     
-
     public AddRuleRequest(@JsonProperty("contextID") String contextID) {
-    this.contextID = contextID;
+        this.contextID = contextID;
   }
 }

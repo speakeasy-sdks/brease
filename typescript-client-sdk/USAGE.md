@@ -1,15 +1,10 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import {
-  AddRuleRequest,
-  AddRuleResponse
-} from "brease-sdk/dist/sdk/models/operations";
-import {
-  ConditionTypeEnum,
-} from "brease-sdk/dist/sdk/models/shared";
-
 import { AxiosError } from "axios";
 import { SDK } from "brease-sdk";
+import { AddRuleRequest, AddRuleResponse } from "brease-sdk/dist/sdk/models/operations";
+import { ConditionTypeEnum } from "brease-sdk/dist/sdk/models/shared";
+
 const sdk = new SDK();
 
 const req: AddRuleRequest = {
@@ -41,7 +36,9 @@ const req: AddRuleRequest = {
 };
 
 sdk.contextID.addRule(req).then((res: AddRuleResponse | AxiosError) => {
-   // handle response
+  if (res instanceof UsageExamplePostResponse && res.statusCode == 200) {
+    // handle response
+  }
 });
 ```
 <!-- End SDK Example Usage -->

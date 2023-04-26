@@ -17,6 +17,5 @@ public class ConditionBaseKey {
         return this;
     }
     
-
     public ConditionBaseKey(){}
 }

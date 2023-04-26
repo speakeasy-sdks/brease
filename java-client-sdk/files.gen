@@ -67,4 +67,6 @@ lib/src/main/java/industries/dot/brease/models/shared/EvaluateRulesInput.java
 lib/src/main/java/industries/dot/brease/models/shared/ApiAllRulesResponse.java
 lib/src/main/java/industries/dot/brease/models/shared/ApiReplaceRuleResponse.java
 lib/src/main/java/industries/dot/brease/models/shared/ReplaceRuleInput.java
+docs/sdk/README.md
+docs/contextid/README.md
 USAGE.md

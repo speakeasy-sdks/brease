@@ -44,7 +44,7 @@ req = operations.AddRuleRequest(
     ),
     context_id="quod",
 )
-    
+
 res = s.context_id.add_rule(req, operations.AddRuleSecurity(
     api_token="Bearer YOUR_BEARER_TOKEN_HERE",
 ))
@@ -58,13 +58,13 @@ if res.api_add_rule_response is not None:
 ## Available Resources and Operations
 
 
-### context_id
+### [context_id](docs/contextid/README.md)
 
-* `add_rule` - Adds a new rule to the context
-* `evaluate_rules` - Evaluate rules within a context on the provided object
-* `get_all_rules` - Returns all rules with the context
-* `remove_rule` - Removes a rule from the context
-* `replace_rule` - Replaces an existing rule within the context
+* [add_rule](docs/contextid/README.md#add_rule) - Adds a new rule to the context
+* [evaluate_rules](docs/contextid/README.md#evaluate_rules) - Evaluate rules within a context on the provided object
+* [get_all_rules](docs/contextid/README.md#get_all_rules) - Returns all rules with the context
+* [remove_rule](docs/contextid/README.md#remove_rule) - Removes a rule from the context
+* [replace_rule](docs/contextid/README.md#replace_rule) - Replaces an existing rule within the context
 <!-- End SDK Available Operations -->
 
 ### Maturity

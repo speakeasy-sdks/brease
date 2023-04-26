@@ -29,9 +29,8 @@ public class ReplaceRuleRequest {
         return this;
     }
     
-
     public ReplaceRuleRequest(@JsonProperty("contextID") String contextID, @JsonProperty("id") String id) {
-    this.contextID = contextID;
-this.id = id;
+        this.contextID = contextID;
+        this.id = id;
   }
 }

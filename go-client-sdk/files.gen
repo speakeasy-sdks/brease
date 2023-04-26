@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -35,4 +36,6 @@ pkg/models/shared/evaluaterulesinput.go
 pkg/models/shared/apiallrulesresponse.go
 pkg/models/shared/apireplaceruleresponse.go
 pkg/models/shared/replaceruleinput.go
+docs/sdk/README.md
+docs/contextid/README.md
 USAGE.md

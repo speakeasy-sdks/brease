@@ -15,8 +15,7 @@ public class GetAllRulesSecurity {
         return this;
     }
     
-
     public GetAllRulesSecurity(@JsonProperty("apiToken") String apiToken) {
-    this.apiToken = apiToken;
+        this.apiToken = apiToken;
   }
 }

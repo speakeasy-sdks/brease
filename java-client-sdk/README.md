@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'industries.dot.brease:brease-sdk:0.1.0'
+implementation 'industries.dot.brease:brease-sdk:0.2.0'
 ```
 <!-- End SDK Installation -->
 
@@ -16,25 +16,24 @@ implementation 'industries.dot.brease:brease-sdk:0.1.0'
 package hello.world;
 
 import industries.dot.brease.SDK;
-
-import industries.dot.brease.models.operations.AddRuleSecurity;
 import industries.dot.brease.models.operations.AddRuleRequest;
 import industries.dot.brease.models.operations.AddRuleResponse;
+import industries.dot.brease.models.operations.AddRuleSecurity;
 import industries.dot.brease.models.shared.AddRuleInput;
-import industries.dot.brease.models.shared.ModelsRuleExpression3;
-import industries.dot.brease.models.shared.ModelsRuleExpression2;
-import industries.dot.brease.models.shared.ModelsRuleExpression1;
-import industries.dot.brease.models.shared.ModelsRule;
-import industries.dot.brease.models.shared.ModelsTarget;
-import industries.dot.brease.models.shared.ExpressionArrayExpression3;
-import industries.dot.brease.models.shared.ExpressionArrayExpression2;
-import industries.dot.brease.models.shared.ExpressionArrayExpression1;
-import industries.dot.brease.models.shared.ExpressionArray;
-import industries.dot.brease.models.shared.ConditionBase2;
 import industries.dot.brease.models.shared.Condition;
-import industries.dot.brease.models.shared.ConditionTypeEnum;
+import industries.dot.brease.models.shared.ConditionBase2;
 import industries.dot.brease.models.shared.ConditionBaseKey;
 import industries.dot.brease.models.shared.ConditionBaseRef;
+import industries.dot.brease.models.shared.ConditionTypeEnum;
+import industries.dot.brease.models.shared.ExpressionArray;
+import industries.dot.brease.models.shared.ExpressionArrayExpression1;
+import industries.dot.brease.models.shared.ExpressionArrayExpression2;
+import industries.dot.brease.models.shared.ExpressionArrayExpression3;
+import industries.dot.brease.models.shared.ModelsRule;
+import industries.dot.brease.models.shared.ModelsRuleExpression1;
+import industries.dot.brease.models.shared.ModelsRuleExpression2;
+import industries.dot.brease.models.shared.ModelsRuleExpression3;
+import industries.dot.brease.models.shared.ModelsTarget;
 
 public class Application {
     public static void main(String[] args) {
@@ -42,18 +41,39 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AddRuleRequest req = new AddRuleRequest("corrupti");            
+            AddRuleRequest req = new AddRuleRequest("corrupti") {{
+                addRuleInput = new AddRuleInput() {{
+                    rule = new ModelsRule("provident",                 new ModelsRuleExpression3() {{
+                                        condition = new Condition() {{
+                                            base = new ConditionBase2() {{
+                                                ref = new ConditionBaseRef() {{
+                                                    dst = "unde";
+                                                    src = "nulla";
+                                                }};
+                                            }};
+                                            parameter = false;
+                                            type = ConditionTypeEnum.RGX;
+                                        }};
+                                    }}, "vel",                 new ModelsTarget("error", "deserunt") {{
+                                        targetValue = "suscipit";
+                                    }};) {{
+                        description = "iure";
+                    }};;
+                }};;
+            }};            
 
             AddRuleResponse res = sdk.contextID.addRule(req, new AddRuleSecurity("magnam") {{
                 apiToken = "Bearer YOUR_BEARER_TOKEN_HERE";
             }});
 
-            if (res.apiAddRuleResponse.isPresent()) {
+            if (res.apiAddRuleResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -61,13 +81,13 @@ public class Application {
 ## Available Resources and Operations
 
 
-### contextID
+### [contextID](docs/contextid/README.md)
 
-* `addRule` - Adds a new rule to the context
-* `evaluateRules` - Evaluate rules within a context on the provided object
-* `getAllRules` - Returns all rules with the context
-* `removeRule` - Removes a rule from the context
-* `replaceRule` - Replaces an existing rule within the context
+* [addRule](docs/contextid/README.md#addrule) - Adds a new rule to the context
+* [evaluateRules](docs/contextid/README.md#evaluaterules) - Evaluate rules within a context on the provided object
+* [getAllRules](docs/contextid/README.md#getallrules) - Returns all rules with the context
+* [removeRule](docs/contextid/README.md#removerule) - Removes a rule from the context
+* [replaceRule](docs/contextid/README.md#replacerule) - Replaces an existing rule within the context
 <!-- End SDK Available Operations -->
 
 ### Maturity

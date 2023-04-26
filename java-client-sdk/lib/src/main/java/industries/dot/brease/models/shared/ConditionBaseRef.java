@@ -25,6 +25,5 @@ public class ConditionBaseRef {
         return this;
     }
     
-
     public ConditionBaseRef(){}
 }

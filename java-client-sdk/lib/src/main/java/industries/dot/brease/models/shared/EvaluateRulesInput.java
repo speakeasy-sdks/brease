@@ -32,8 +32,7 @@ public class EvaluateRulesInput {
         return this;
     }
     
-
     public EvaluateRulesInput(@JsonProperty("object") java.util.Map<String, Object> object) {
-    this.object = object;
+        this.object = object;
   }
 }

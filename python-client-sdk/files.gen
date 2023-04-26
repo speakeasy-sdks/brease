@@ -29,4 +29,6 @@ src/sdk/models/shared/apiallrulesresponse.py
 src/sdk/models/shared/apireplaceruleresponse.py
 src/sdk/models/shared/replaceruleinput.py
 src/sdk/models/shared/__init__.py
+docs/sdk/README.md
+docs/contextid/README.md
 USAGE.md

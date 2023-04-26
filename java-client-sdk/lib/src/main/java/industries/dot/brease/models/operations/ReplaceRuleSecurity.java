@@ -15,8 +15,7 @@ public class ReplaceRuleSecurity {
         return this;
     }
     
-
     public ReplaceRuleSecurity(@JsonProperty("apiToken") String apiToken) {
-    this.apiToken = apiToken;
+        this.apiToken = apiToken;
   }
 }

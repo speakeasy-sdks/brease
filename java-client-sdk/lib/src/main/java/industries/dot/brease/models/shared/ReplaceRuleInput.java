@@ -14,8 +14,7 @@ public class ReplaceRuleInput {
         return this;
     }
     
-
     public ReplaceRuleInput(@JsonProperty("rule") ModelsRule rule) {
-    this.rule = rule;
+        this.rule = rule;
   }
 }

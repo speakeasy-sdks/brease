@@ -24,6 +24,10 @@ const (
 	ConditionTypeEnumNrgx ConditionTypeEnum = "nrgx"
 )
 
+func (e ConditionTypeEnum) ToPointer() *ConditionTypeEnum {
+	return &e
+}
+
 func (e *ConditionTypeEnum) UnmarshalJSON(data []byte) error {
 	var s string
 	if err := json.Unmarshal(data, &s); err != nil {

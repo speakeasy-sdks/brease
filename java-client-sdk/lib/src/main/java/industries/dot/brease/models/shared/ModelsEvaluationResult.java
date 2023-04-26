@@ -41,6 +41,5 @@ public class ModelsEvaluationResult {
         return this;
     }
     
-
     public ModelsEvaluationResult(){}
 }

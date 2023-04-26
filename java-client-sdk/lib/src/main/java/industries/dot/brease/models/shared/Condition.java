@@ -33,6 +33,5 @@ public class Condition {
         return this;
     }
     
-
     public Condition(){}
 }

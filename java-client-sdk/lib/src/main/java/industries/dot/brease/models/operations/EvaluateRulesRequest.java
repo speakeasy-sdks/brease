@@ -22,8 +22,7 @@ public class EvaluateRulesRequest {
         return this;
     }
     
-
     public EvaluateRulesRequest(@JsonProperty("contextID") String contextID) {
-    this.contextID = contextID;
+        this.contextID = contextID;
   }
 }

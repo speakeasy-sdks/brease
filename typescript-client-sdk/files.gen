@@ -40,4 +40,6 @@ src/sdk/models/shared/apiallrulesresponse.ts
 src/sdk/models/shared/apireplaceruleresponse.ts
 src/sdk/models/shared/replaceruleinput.ts
 src/sdk/models/shared/index.ts
+docs/sdk/README.md
+docs/contextid/README.md
 USAGE.md

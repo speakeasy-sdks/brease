@@ -31,9 +31,8 @@ public class ModelsTarget {
         return this;
     }
     
-
     public ModelsTarget(@JsonProperty("target") String target, @JsonProperty("type") String type) {
-    this.target = target;
-this.type = type;
+        this.target = target;
+        this.type = type;
   }
 }
