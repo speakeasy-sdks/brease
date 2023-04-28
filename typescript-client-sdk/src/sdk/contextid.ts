@@ -37,7 +37,7 @@ export class ContextID {
   /**
    * Adds a new rule to the context
    */
-  addRule(
+  async addRule(
     req: operations.AddRuleRequest,
     security: operations.AddRuleSecurity,
     config?: AxiosRequestConfig
@@ -77,7 +77,8 @@ export class ContextID {
 
     const headers = { ...reqBodyHeaders, ...config?.headers };
 
-    const r = client.request({
+    const httpRes: AxiosResponse = await client.request({
+      validateStatus: () => true,
       url: url,
       method: "post",
       headers: headers,
@@ -85,35 +86,35 @@ export class ContextID {
       ...config,
     });
 
-    return r.then((httpRes: AxiosResponse) => {
-      const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+    const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
-      if (httpRes?.status == null)
-        throw new Error(`status code not found in response: ${httpRes}`);
-      const res: operations.AddRuleResponse = new operations.AddRuleResponse({
-        statusCode: httpRes.status,
-        contentType: contentType,
-        rawResponse: httpRes,
-      });
-      switch (true) {
-        case httpRes?.status == 200:
-          if (utils.matchContentType(contentType, `application/json`)) {
-            res.apiAddRuleResponse = utils.objectToClass(
-              httpRes?.data,
-              shared.ApiAddRuleResponse
-            );
-          }
-          break;
-      }
+    if (httpRes?.status == null) {
+      throw new Error(`status code not found in response: ${httpRes}`);
+    }
 
-      return res;
+    const res: operations.AddRuleResponse = new operations.AddRuleResponse({
+      statusCode: httpRes.status,
+      contentType: contentType,
+      rawResponse: httpRes,
     });
+    switch (true) {
+      case httpRes?.status == 200:
+        if (utils.matchContentType(contentType, `application/json`)) {
+          res.apiAddRuleResponse = utils.objectToClass(
+            httpRes?.data,
+            shared.ApiAddRuleResponse
+          );
+        }
+        break;
+    }
+
+    return res;
   }
 
   /**
    * Evaluate rules within a context on the provided object
    */
-  evaluateRules(
+  async evaluateRules(
     req: operations.EvaluateRulesRequest,
     security: operations.EvaluateRulesSecurity,
     config?: AxiosRequestConfig
@@ -153,7 +154,8 @@ export class ContextID {
 
     const headers = { ...reqBodyHeaders, ...config?.headers };
 
-    const r = client.request({
+    const httpRes: AxiosResponse = await client.request({
+      validateStatus: () => true,
       url: url,
       method: "post",
       headers: headers,
@@ -161,36 +163,36 @@ export class ContextID {
       ...config,
     });
 
-    return r.then((httpRes: AxiosResponse) => {
-      const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+    const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
-      if (httpRes?.status == null)
-        throw new Error(`status code not found in response: ${httpRes}`);
-      const res: operations.EvaluateRulesResponse =
-        new operations.EvaluateRulesResponse({
-          statusCode: httpRes.status,
-          contentType: contentType,
-          rawResponse: httpRes,
-        });
-      switch (true) {
-        case httpRes?.status == 200:
-          if (utils.matchContentType(contentType, `application/json`)) {
-            res.apiEvaluateRulesResponse = utils.objectToClass(
-              httpRes?.data,
-              shared.ApiEvaluateRulesResponse
-            );
-          }
-          break;
-      }
+    if (httpRes?.status == null) {
+      throw new Error(`status code not found in response: ${httpRes}`);
+    }
 
-      return res;
-    });
+    const res: operations.EvaluateRulesResponse =
+      new operations.EvaluateRulesResponse({
+        statusCode: httpRes.status,
+        contentType: contentType,
+        rawResponse: httpRes,
+      });
+    switch (true) {
+      case httpRes?.status == 200:
+        if (utils.matchContentType(contentType, `application/json`)) {
+          res.apiEvaluateRulesResponse = utils.objectToClass(
+            httpRes?.data,
+            shared.ApiEvaluateRulesResponse
+          );
+        }
+        break;
+    }
+
+    return res;
   }
 
   /**
    * Returns all rules with the context
    */
-  getAllRules(
+  async getAllRules(
     req: operations.GetAllRulesRequest,
     security: operations.GetAllRulesSecurity,
     config?: AxiosRequestConfig
@@ -210,42 +212,43 @@ export class ContextID {
       security
     );
 
-    const r = client.request({
+    const httpRes: AxiosResponse = await client.request({
+      validateStatus: () => true,
       url: url,
       method: "get",
       ...config,
     });
 
-    return r.then((httpRes: AxiosResponse) => {
-      const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+    const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
-      if (httpRes?.status == null)
-        throw new Error(`status code not found in response: ${httpRes}`);
-      const res: operations.GetAllRulesResponse =
-        new operations.GetAllRulesResponse({
-          statusCode: httpRes.status,
-          contentType: contentType,
-          rawResponse: httpRes,
-        });
-      switch (true) {
-        case httpRes?.status == 200:
-          if (utils.matchContentType(contentType, `application/json`)) {
-            res.apiAllRulesResponse = utils.objectToClass(
-              httpRes?.data,
-              shared.ApiAllRulesResponse
-            );
-          }
-          break;
-      }
+    if (httpRes?.status == null) {
+      throw new Error(`status code not found in response: ${httpRes}`);
+    }
 
-      return res;
-    });
+    const res: operations.GetAllRulesResponse =
+      new operations.GetAllRulesResponse({
+        statusCode: httpRes.status,
+        contentType: contentType,
+        rawResponse: httpRes,
+      });
+    switch (true) {
+      case httpRes?.status == 200:
+        if (utils.matchContentType(contentType, `application/json`)) {
+          res.apiAllRulesResponse = utils.objectToClass(
+            httpRes?.data,
+            shared.ApiAllRulesResponse
+          );
+        }
+        break;
+    }
+
+    return res;
   }
 
   /**
    * Removes a rule from the context
    */
-  removeRule(
+  async removeRule(
     req: operations.RemoveRuleRequest,
     security: operations.RemoveRuleSecurity,
     config?: AxiosRequestConfig
@@ -269,36 +272,37 @@ export class ContextID {
       security
     );
 
-    const r = client.request({
+    const httpRes: AxiosResponse = await client.request({
+      validateStatus: () => true,
       url: url,
       method: "delete",
       ...config,
     });
 
-    return r.then((httpRes: AxiosResponse) => {
-      const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+    const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
-      if (httpRes?.status == null)
-        throw new Error(`status code not found in response: ${httpRes}`);
-      const res: operations.RemoveRuleResponse =
-        new operations.RemoveRuleResponse({
-          statusCode: httpRes.status,
-          contentType: contentType,
-          rawResponse: httpRes,
-        });
-      switch (true) {
-        case httpRes?.status == 200:
-          break;
-      }
+    if (httpRes?.status == null) {
+      throw new Error(`status code not found in response: ${httpRes}`);
+    }
 
-      return res;
-    });
+    const res: operations.RemoveRuleResponse =
+      new operations.RemoveRuleResponse({
+        statusCode: httpRes.status,
+        contentType: contentType,
+        rawResponse: httpRes,
+      });
+    switch (true) {
+      case httpRes?.status == 200:
+        break;
+    }
+
+    return res;
   }
 
   /**
    * Replaces an existing rule within the context
    */
-  replaceRule(
+  async replaceRule(
     req: operations.ReplaceRuleRequest,
     security: operations.ReplaceRuleSecurity,
     config?: AxiosRequestConfig
@@ -338,7 +342,8 @@ export class ContextID {
 
     const headers = { ...reqBodyHeaders, ...config?.headers };
 
-    const r = client.request({
+    const httpRes: AxiosResponse = await client.request({
+      validateStatus: () => true,
       url: url,
       method: "put",
       headers: headers,
@@ -346,29 +351,29 @@ export class ContextID {
       ...config,
     });
 
-    return r.then((httpRes: AxiosResponse) => {
-      const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+    const contentType: string = httpRes?.headers?.["content-type"] ?? "";
 
-      if (httpRes?.status == null)
-        throw new Error(`status code not found in response: ${httpRes}`);
-      const res: operations.ReplaceRuleResponse =
-        new operations.ReplaceRuleResponse({
-          statusCode: httpRes.status,
-          contentType: contentType,
-          rawResponse: httpRes,
-        });
-      switch (true) {
-        case httpRes?.status == 200:
-          if (utils.matchContentType(contentType, `application/json`)) {
-            res.apiReplaceRuleResponse = utils.objectToClass(
-              httpRes?.data,
-              shared.ApiReplaceRuleResponse
-            );
-          }
-          break;
-      }
+    if (httpRes?.status == null) {
+      throw new Error(`status code not found in response: ${httpRes}`);
+    }
 
-      return res;
-    });
+    const res: operations.ReplaceRuleResponse =
+      new operations.ReplaceRuleResponse({
+        statusCode: httpRes.status,
+        contentType: contentType,
+        rawResponse: httpRes,
+      });
+    switch (true) {
+      case httpRes?.status == 200:
+        if (utils.matchContentType(contentType, `application/json`)) {
+          res.apiReplaceRuleResponse = utils.objectToClass(
+            httpRes?.data,
+            shared.ApiReplaceRuleResponse
+          );
+        }
+        break;
+    }
+
+    return res;
   }
 }

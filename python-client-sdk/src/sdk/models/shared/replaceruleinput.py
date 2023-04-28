@@ -11,5 +11,6 @@ from sdk import utils
 @dataclasses.dataclass
 class ReplaceRuleInput:
     
-    rule: shared_modelsrule.ModelsRule = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule') }})  
+    rule: shared_modelsrule.ModelsRule = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule') }})
+
     

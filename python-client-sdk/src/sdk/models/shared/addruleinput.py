@@ -12,5 +12,6 @@ from typing import Optional
 @dataclasses.dataclass
 class AddRuleInput:
     
-    rule: Optional[shared_modelsrule.ModelsRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule'), 'exclude': lambda f: f is None }})  
+    rule: Optional[shared_modelsrule.ModelsRule] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule'), 'exclude': lambda f: f is None }})
+
     

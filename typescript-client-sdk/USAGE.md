@@ -1,13 +1,12 @@
 <!-- Start SDK Example Usage -->
 ```typescript
-import { AxiosError } from "axios";
 import { SDK } from "brease-sdk";
-import { AddRuleRequest, AddRuleResponse } from "brease-sdk/dist/sdk/models/operations";
+import { AddRuleResponse } from "brease-sdk/dist/sdk/models/operations";
 import { ConditionTypeEnum } from "brease-sdk/dist/sdk/models/shared";
 
 const sdk = new SDK();
 
-const req: AddRuleRequest = {
+sdk.contextID.addRule({
   addRuleInput: {
     rule: {
       action: "corrupti",
@@ -33,10 +32,8 @@ const req: AddRuleRequest = {
     },
   },
   contextID: "quod",
-};
-
-sdk.contextID.addRule(req).then((res: AddRuleResponse | AxiosError) => {
-  if (res instanceof UsageExamplePostResponse && res.statusCode == 200) {
+}).then((res: AddRuleResponse) => {
+  if (res.statusCode == 200) {
     // handle response
   }
 });

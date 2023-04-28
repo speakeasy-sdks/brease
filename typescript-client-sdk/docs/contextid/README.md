@@ -19,14 +19,13 @@ Adds a new rule to the context
 ### Example Usage
 
 ```typescript
-import { AxiosError } from "axios";
 import { SDK } from "brease-sdk";
-import { AddRuleRequest, AddRuleResponse } from "brease-sdk/dist/sdk/models/operations";
+import { AddRuleResponse } from "brease-sdk/dist/sdk/models/operations";
 import { ConditionTypeEnum } from "brease-sdk/dist/sdk/models/shared";
 
 const sdk = new SDK();
 
-const req: AddRuleRequest = {
+sdk.contextID.addRule({
   addRuleInput: {
     rule: {
       action: "quod",
@@ -73,10 +72,8 @@ const req: AddRuleRequest = {
     },
   },
   contextID: "explicabo",
-};
-
-sdk.contextID.addRule(req).then((res: AddRuleResponse | AxiosError) => {
-  if (res instanceof UsageExamplePostResponse && res.statusCode == 200) {
+}).then((res: AddRuleResponse) => {
+  if (res.statusCode == 200) {
     // handle response
   }
 });
@@ -89,14 +86,13 @@ Evaluate rules within a context on the provided object
 ### Example Usage
 
 ```typescript
-import { AxiosError } from "axios";
 import { SDK } from "brease-sdk";
-import { EvaluateRulesRequest, EvaluateRulesResponse } from "brease-sdk/dist/sdk/models/operations";
+import { EvaluateRulesResponse } from "brease-sdk/dist/sdk/models/operations";
 import { ConditionTypeEnum } from "brease-sdk/dist/sdk/models/shared";
 
 const sdk = new SDK();
 
-const req: EvaluateRulesRequest = {
+sdk.contextID.evaluateRules({
   evaluateRulesInput: {
     object: {
       "enim": "omnis",
@@ -212,10 +208,8 @@ const req: EvaluateRulesRequest = {
     ],
   },
   contextID: "eum",
-};
-
-sdk.contextID.evaluateRules(req).then((res: EvaluateRulesResponse | AxiosError) => {
-  if (res instanceof UsageExamplePostResponse && res.statusCode == 200) {
+}).then((res: EvaluateRulesResponse) => {
+  if (res.statusCode == 200) {
     // handle response
   }
 });
@@ -228,18 +222,15 @@ Returns all rules with the context
 ### Example Usage
 
 ```typescript
-import { AxiosError } from "axios";
 import { SDK } from "brease-sdk";
-import { GetAllRulesRequest, GetAllRulesResponse } from "brease-sdk/dist/sdk/models/operations";
+import { GetAllRulesResponse } from "brease-sdk/dist/sdk/models/operations";
 
 const sdk = new SDK();
 
-const req: GetAllRulesRequest = {
+sdk.contextID.getAllRules({
   contextID: "dolor",
-};
-
-sdk.contextID.getAllRules(req).then((res: GetAllRulesResponse | AxiosError) => {
-  if (res instanceof UsageExamplePostResponse && res.statusCode == 200) {
+}).then((res: GetAllRulesResponse) => {
+  if (res.statusCode == 200) {
     // handle response
   }
 });
@@ -252,19 +243,16 @@ Removes a rule from the context
 ### Example Usage
 
 ```typescript
-import { AxiosError } from "axios";
 import { SDK } from "brease-sdk";
-import { RemoveRuleRequest, RemoveRuleResponse } from "brease-sdk/dist/sdk/models/operations";
+import { RemoveRuleResponse } from "brease-sdk/dist/sdk/models/operations";
 
 const sdk = new SDK();
 
-const req: RemoveRuleRequest = {
+sdk.contextID.removeRule({
   contextID: "necessitatibus",
   id: "2516fe4c-8b71-41e5-b7fd-2ed028921cdd",
-};
-
-sdk.contextID.removeRule(req).then((res: RemoveRuleResponse | AxiosError) => {
-  if (res instanceof UsageExamplePostResponse && res.statusCode == 200) {
+}).then((res: RemoveRuleResponse) => {
+  if (res.statusCode == 200) {
     // handle response
   }
 });
@@ -277,14 +265,13 @@ Replaces an existing rule within the context
 ### Example Usage
 
 ```typescript
-import { AxiosError } from "axios";
 import { SDK } from "brease-sdk";
-import { ReplaceRuleRequest, ReplaceRuleResponse } from "brease-sdk/dist/sdk/models/operations";
+import { ReplaceRuleResponse } from "brease-sdk/dist/sdk/models/operations";
 import { ConditionTypeEnum } from "brease-sdk/dist/sdk/models/shared";
 
 const sdk = new SDK();
 
-const req: ReplaceRuleRequest = {
+sdk.contextID.replaceRule({
   replaceRuleInput: {
     rule: {
       action: "maxime",
@@ -308,10 +295,8 @@ const req: ReplaceRuleRequest = {
   },
   contextID: "vero",
   id: "5fe9b90c-2890-49b3-be49-a8d9cbf48633",
-};
-
-sdk.contextID.replaceRule(req).then((res: ReplaceRuleResponse | AxiosError) => {
-  if (res instanceof UsageExamplePostResponse && res.statusCode == 200) {
+}).then((res: ReplaceRuleResponse) => {
+  if (res.statusCode == 200) {
     // handle response
   }
 });
