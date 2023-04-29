@@ -11,26 +11,20 @@ from typing import Optional
 class GetAllRulesSecurity:
     
     api_token: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
-
     
 
 @dataclasses.dataclass
 class GetAllRulesRequest:
     
     context_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'contextID', 'style': 'simple', 'explode': False }})
-
     
 
 @dataclasses.dataclass
 class GetAllRulesResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     api_all_rules_response: Optional[shared_apiallrulesresponse.APIAllRulesResponse] = dataclasses.field(default=None)
-
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     

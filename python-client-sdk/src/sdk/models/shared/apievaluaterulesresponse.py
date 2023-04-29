@@ -14,5 +14,4 @@ class APIEvaluateRulesResponse:
     r"""OK"""
     
     results: Optional[list[shared_modelsevaluationresult.ModelsEvaluationResult]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('results'), 'exclude': lambda f: f is None }})
-
     

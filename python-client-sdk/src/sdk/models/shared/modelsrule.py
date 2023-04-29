@@ -15,7 +15,6 @@ from typing import Any, Optional
 class ModelsRuleExpression3:
     
     condition: Optional[shared_condition.Condition] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('condition'), 'exclude': lambda f: f is None }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -23,7 +22,6 @@ class ModelsRuleExpression3:
 class ModelsRuleExpression2:
     
     or_: Optional[shared_expressionarray.ExpressionArray] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('or'), 'exclude': lambda f: f is None }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -31,7 +29,6 @@ class ModelsRuleExpression2:
 class ModelsRuleExpression1:
     
     and_: Optional[shared_expressionarray.ExpressionArray] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('and'), 'exclude': lambda f: f is None }})
-
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -39,13 +36,8 @@ class ModelsRuleExpression1:
 class ModelsRule:
     
     action: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action') }})
-
     expression: Any = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expression') }})
-
     id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
-
     target: shared_modelstarget.ModelsTarget = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('target') }})
-
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
-
     

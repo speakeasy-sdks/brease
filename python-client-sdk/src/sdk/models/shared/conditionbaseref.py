@@ -12,7 +12,5 @@ from typing import Optional
 class ConditionBaseRef:
     
     dst: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('dst'), 'exclude': lambda f: f is None }})
-
     src: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('src'), 'exclude': lambda f: f is None }})
-
     

@@ -12,11 +12,7 @@ from typing import Optional
 class ModelsEvaluationResult:
     
     action: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('action'), 'exclude': lambda f: f is None }})
-
     action_target_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('actionTargetType'), 'exclude': lambda f: f is None }})
-
     target_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('targetID'), 'exclude': lambda f: f is None }})
-
     value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('Value'), 'exclude': lambda f: f is None }})
-
     

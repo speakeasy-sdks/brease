@@ -12,5 +12,4 @@ from sdk import utils
 class ReplaceRuleInput:
     
     rule: shared_modelsrule.ModelsRule = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rule') }})
-
     
