@@ -32,8 +32,8 @@ import(
 func main() {
     s := sdk.New()
 
-    ctx := context.Background()    
-    req := operations.AddRuleRequest{
+    ctx := context.Background()
+    res, err := s.ContextID.AddRule(ctx, operations.AddRuleRequest{
         AddRuleInput: &shared.AddRuleInput{
             Rule: &shared.ModelsRule{
                 Action: "odit",
@@ -48,9 +48,7 @@ func main() {
             },
         },
         ContextID: "dolor",
-    }
-
-    res, err := s.ContextID.AddRule(ctx, req, operations.AddRuleSecurity{
+    }, operations.AddRuleSecurity{
         APIToken: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
@@ -83,8 +81,8 @@ import(
 func main() {
     s := sdk.New()
 
-    ctx := context.Background()    
-    req := operations.EvaluateRulesRequest{
+    ctx := context.Background()
+    res, err := s.ContextID.EvaluateRules(ctx, operations.EvaluateRulesRequest{
         EvaluateRulesInput: &shared.EvaluateRulesInput{
             Object: map[string]interface{}{
                 "laboriosam": "hic",
@@ -118,9 +116,7 @@ func main() {
             },
         },
         ContextID: "corporis",
-    }
-
-    res, err := s.ContextID.EvaluateRules(ctx, req, operations.EvaluateRulesSecurity{
+    }, operations.EvaluateRulesSecurity{
         APIToken: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
@@ -152,12 +148,10 @@ import(
 func main() {
     s := sdk.New()
 
-    ctx := context.Background()    
-    req := operations.GetAllRulesRequest{
+    ctx := context.Background()
+    res, err := s.ContextID.GetAllRules(ctx, operations.GetAllRulesRequest{
         ContextID: "dolore",
-    }
-
-    res, err := s.ContextID.GetAllRules(ctx, req, operations.GetAllRulesSecurity{
+    }, operations.GetAllRulesSecurity{
         APIToken: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
@@ -189,13 +183,11 @@ import(
 func main() {
     s := sdk.New()
 
-    ctx := context.Background()    
-    req := operations.RemoveRuleRequest{
+    ctx := context.Background()
+    res, err := s.ContextID.RemoveRule(ctx, operations.RemoveRuleRequest{
         ContextID: "iusto",
         ID: "1b5e6e13-b99d-4488-a1e9-1e450ad2abd4",
-    }
-
-    res, err := s.ContextID.RemoveRule(ctx, req, operations.RemoveRuleSecurity{
+    }, operations.RemoveRuleSecurity{
         APIToken: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
@@ -228,8 +220,8 @@ import(
 func main() {
     s := sdk.New()
 
-    ctx := context.Background()    
-    req := operations.ReplaceRuleRequest{
+    ctx := context.Background()
+    res, err := s.ContextID.ReplaceRule(ctx, operations.ReplaceRuleRequest{
         ReplaceRuleInput: &shared.ReplaceRuleInput{
             Rule: shared.ModelsRule{
                 Action: "modi",
@@ -245,9 +237,7 @@ func main() {
         },
         ContextID: "dicta",
         ID: "4cd66ae3-95ef-4b9b-a88f-3a66997074ba",
-    }
-
-    res, err := s.ContextID.ReplaceRule(ctx, req, operations.ReplaceRuleSecurity{
+    }, operations.ReplaceRuleSecurity{
         APIToken: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {

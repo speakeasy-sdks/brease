@@ -28,18 +28,18 @@ s = sdk.SDK()
 req = operations.AddRuleRequest(
     add_rule_input=shared.AddRuleInput(
         rule=shared.ModelsRule(
-            action="quod",
-            description="esse",
+            action='quod',
+            description='esse',
             expression=shared.ModelsRuleExpression2(
                 or_=shared.ExpressionArray(
                     expression=[
                         shared.ExpressionArrayExpression3(
                             condition=shared.Condition(
                                 base=shared.ConditionBaseKey(
-                                    key="nam",
+                                    key='nam',
                                 ),
                                 parameter=False,
-                                type="sx",
+                                type=shared.ConditionTypeEnum.SX,
                             ),
                         ),
                         shared.ExpressionArrayExpression1(
@@ -52,26 +52,26 @@ req = operations.AddRuleRequest(
                             condition=shared.Condition(
                                 base=shared.ConditionBase2(
                                     ref=shared.ConditionBaseRef(
-                                        dst="totam",
-                                        src="beatae",
+                                        dst='totam',
+                                        src='beatae',
                                     ),
                                 ),
                                 parameter=False,
-                                type="npx",
+                                type=shared.ConditionTypeEnum.NPX,
                             ),
                         ),
                     ],
                 ),
             ),
-            id="42cb7392-0592-4939-afea-7596eb10faaa",
+            id='42cb7392-0592-4939-afea-7596eb10faaa',
             target=shared.ModelsTarget(
-                target="dolores",
-                target_value="dolorem",
-                type="corporis",
+                target='dolores',
+                target_value='dolorem',
+                type='corporis',
             ),
         ),
     ),
-    context_id="explicabo",
+    context_id='explicabo',
 )
 
 res = s.context_id.add_rule(req, operations.AddRuleSecurity(
@@ -98,16 +98,16 @@ s = sdk.SDK()
 req = operations.EvaluateRulesRequest(
     evaluate_rules_input=shared.EvaluateRulesInput(
         object={
-            "enim": "omnis",
-            "nemo": "minima",
-            "excepturi": "accusantium",
-            "iure": "culpa",
+            "enim": 'omnis',
+            "nemo": 'minima',
+            "excepturi": 'accusantium',
+            "iure": 'culpa',
         },
-        override_code="doloribus",
+        override_code='doloribus',
         override_rules=[
             shared.ModelsRule(
-                action="architecto",
-                description="mollitia",
+                action='architecto',
+                description='mollitia',
                 expression=shared.ModelsRuleExpression1(
                     and_=shared.ExpressionArray(
                         expression=[
@@ -118,12 +118,12 @@ req = operations.EvaluateRulesRequest(
                                 condition=shared.Condition(
                                     base=shared.ConditionBase2(
                                         ref=shared.ConditionBaseRef(
-                                            dst="occaecati",
-                                            src="numquam",
+                                            dst='occaecati',
+                                            src='numquam',
                                         ),
                                     ),
                                     parameter=False,
-                                    type="npx",
+                                    type=shared.ConditionTypeEnum.NPX,
                                 ),
                             ),
                             shared.ExpressionArrayExpression2(
@@ -132,16 +132,16 @@ req = operations.EvaluateRulesRequest(
                         ],
                     ),
                 ),
-                id="39251aa5-2c3f-45ad-819d-a1ffe78f097b",
+                id='39251aa5-2c3f-45ad-819d-a1ffe78f097b',
                 target=shared.ModelsTarget(
-                    target="perferendis",
-                    target_value="doloremque",
-                    type="reprehenderit",
+                    target='perferendis',
+                    target_value='doloremque',
+                    type='reprehenderit',
                 ),
             ),
             shared.ModelsRule(
-                action="ut",
-                description="maiores",
+                action='ut',
+                description='maiores',
                 expression=shared.ModelsRuleExpression1(
                     and_=shared.ExpressionArray(
                         expression=[
@@ -154,63 +154,63 @@ req = operations.EvaluateRulesRequest(
                         ],
                     ),
                 ),
-                id="1b5e6e13-b99d-4488-a1e9-1e450ad2abd4",
+                id='1b5e6e13-b99d-4488-a1e9-1e450ad2abd4',
                 target=shared.ModelsTarget(
-                    target="modi",
-                    target_value="qui",
-                    type="aliquid",
+                    target='modi',
+                    target_value='qui',
+                    type='aliquid',
                 ),
             ),
             shared.ModelsRule(
-                action="cupiditate",
-                description="quos",
+                action='cupiditate',
+                description='quos',
                 expression=shared.ModelsRuleExpression1(
                     and_=shared.ExpressionArray(
                         expression=[
                             shared.ExpressionArrayExpression3(
                                 condition=shared.Condition(
                                     base=shared.ConditionBaseKey(
-                                        key="alias",
+                                        key='alias',
                                     ),
-                                    parameter="dolorum",
-                                    type="sx",
+                                    parameter='dolorum',
+                                    type=shared.ConditionTypeEnum.SX,
                                 ),
                             ),
                         ],
                     ),
                 ),
-                id="4bb4f63c-969e-49a3-afa7-7dfb14cd66ae",
+                id='4bb4f63c-969e-49a3-afa7-7dfb14cd66ae',
                 target=shared.ModelsTarget(
-                    target="non",
-                    target_value="occaecati",
-                    type="enim",
+                    target='non',
+                    target_value='occaecati',
+                    type='enim',
                 ),
             ),
             shared.ModelsRule(
-                action="accusamus",
-                description="delectus",
+                action='accusamus',
+                description='delectus',
                 expression=shared.ModelsRuleExpression3(
                     condition=shared.Condition(
                         base=shared.ConditionBase2(
                             ref=shared.ConditionBaseRef(
-                                dst="nam",
-                                src="id",
+                                dst='nam',
+                                src='id',
                             ),
                         ),
                         parameter=False,
-                        type="sx",
+                        type=shared.ConditionTypeEnum.SX,
                     ),
                 ),
-                id="f3a66997-074b-4a44-a9b6-e2141959890a",
+                id='f3a66997-074b-4a44-a9b6-e2141959890a',
                 target=shared.ModelsTarget(
-                    target="reiciendis",
-                    target_value="mollitia",
-                    type="ad",
+                    target='reiciendis',
+                    target_value='mollitia',
+                    type='ad',
                 ),
             ),
         ],
     ),
-    context_id="eum",
+    context_id='eum',
 )
 
 res = s.context_id.evaluate_rules(req, operations.EvaluateRulesSecurity(
@@ -235,7 +235,7 @@ s = sdk.SDK()
 
 
 req = operations.GetAllRulesRequest(
-    context_id="dolor",
+    context_id='dolor',
 )
 
 res = s.context_id.get_all_rules(req, operations.GetAllRulesSecurity(
@@ -260,8 +260,8 @@ s = sdk.SDK()
 
 
 req = operations.RemoveRuleRequest(
-    context_id="necessitatibus",
-    id="2516fe4c-8b71-41e5-b7fd-2ed028921cdd",
+    context_id='necessitatibus',
+    id='2516fe4c-8b71-41e5-b7fd-2ed028921cdd',
 )
 
 res = s.context_id.remove_rule(req, operations.RemoveRuleSecurity(
@@ -288,8 +288,8 @@ s = sdk.SDK()
 req = operations.ReplaceRuleRequest(
     replace_rule_input=shared.ReplaceRuleInput(
         rule=shared.ModelsRule(
-            action="maxime",
-            description="ea",
+            action='maxime',
+            description='ea',
             expression=shared.ModelsRuleExpression2(
                 or_=shared.ExpressionArray(
                     expression=[
@@ -299,16 +299,16 @@ req = operations.ReplaceRuleRequest(
                     ],
                 ),
             ),
-            id="01fb576b-0d5f-40d3-8c5f-bb2587053202",
+            id='01fb576b-0d5f-40d3-8c5f-bb2587053202',
             target=shared.ModelsTarget(
-                target="minus",
-                target_value="quam",
-                type="dolor",
+                target='minus',
+                target_value='quam',
+                type='dolor',
             ),
         ),
     ),
-    context_id="vero",
-    id="5fe9b90c-2890-49b3-be49-a8d9cbf48633",
+    context_id='vero',
+    id='5fe9b90c-2890-49b3-be49-a8d9cbf48633',
 )
 
 res = s.context_id.replace_rule(req, operations.ReplaceRuleSecurity(
