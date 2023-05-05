@@ -16,7 +16,6 @@ from sdk.models import operations, shared
 
 s = sdk.SDK()
 
-
 req = operations.AddRuleRequest(
     add_rule_input=shared.AddRuleInput(
         rule=shared.ModelsRule(

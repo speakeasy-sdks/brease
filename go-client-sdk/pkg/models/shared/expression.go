@@ -111,11 +111,3 @@ func (u Expression) MarshalJSON() ([]byte, error) {
 
 	return nil, nil
 }
-
-type Expression5 struct {
-	Or *ExpressionArray `json:"or,omitempty"`
-}
-
-type Expression4 struct {
-	And *ExpressionArray `json:"and,omitempty"`
-}

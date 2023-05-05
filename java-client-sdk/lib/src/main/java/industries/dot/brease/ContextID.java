@@ -33,13 +33,6 @@ public class ContextID {
 		this._genVersion = genVersion;
 	}
 
-    /**
-     * Adds a new rule to the context
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public industries.dot.brease.models.operations.AddRuleResponse addRule(industries.dot.brease.models.operations.AddRuleRequest request, industries.dot.brease.models.operations.AddRuleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = industries.dot.brease.utils.Utils.generateURL(industries.dot.brease.models.operations.AddRuleRequest.class, baseUrl, "/{contextID}/rules/add", request, null);
@@ -73,13 +66,6 @@ public class ContextID {
         return res;
     }
 
-    /**
-     * Evaluate rules within a context on the provided object
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public industries.dot.brease.models.operations.EvaluateRulesResponse evaluateRules(industries.dot.brease.models.operations.EvaluateRulesRequest request, industries.dot.brease.models.operations.EvaluateRulesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = industries.dot.brease.utils.Utils.generateURL(industries.dot.brease.models.operations.EvaluateRulesRequest.class, baseUrl, "/{contextID}/evaluate", request, null);
@@ -113,13 +99,6 @@ public class ContextID {
         return res;
     }
 
-    /**
-     * Returns all rules with the context
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public industries.dot.brease.models.operations.GetAllRulesResponse getAllRules(industries.dot.brease.models.operations.GetAllRulesRequest request, industries.dot.brease.models.operations.GetAllRulesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = industries.dot.brease.utils.Utils.generateURL(industries.dot.brease.models.operations.GetAllRulesRequest.class, baseUrl, "/{contextID}/rules", request, null);
@@ -151,13 +130,6 @@ public class ContextID {
         return res;
     }
 
-    /**
-     * Removes a rule from the context
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public industries.dot.brease.models.operations.RemoveRuleResponse removeRule(industries.dot.brease.models.operations.RemoveRuleRequest request, industries.dot.brease.models.operations.RemoveRuleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = industries.dot.brease.utils.Utils.generateURL(industries.dot.brease.models.operations.RemoveRuleRequest.class, baseUrl, "/{contextID}/rules/{id}", request, null);
@@ -183,13 +155,6 @@ public class ContextID {
         return res;
     }
 
-    /**
-     * Replaces an existing rule within the context
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
     public industries.dot.brease.models.operations.ReplaceRuleResponse replaceRule(industries.dot.brease.models.operations.ReplaceRuleRequest request, industries.dot.brease.models.operations.ReplaceRuleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = industries.dot.brease.utils.Utils.generateURL(industries.dot.brease.models.operations.ReplaceRuleRequest.class, baseUrl, "/{contextID}/rules/{id}", request, null);

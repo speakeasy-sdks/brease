@@ -24,7 +24,6 @@ from sdk.models import operations, shared
 
 s = sdk.SDK()
 
-
 req = operations.AddRuleRequest(
     add_rule_input=shared.AddRuleInput(
         rule=shared.ModelsRule(
@@ -93,7 +92,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.EvaluateRulesRequest(
     evaluate_rules_input=shared.EvaluateRulesInput(
@@ -233,7 +231,6 @@ from sdk.models import operations
 
 s = sdk.SDK()
 
-
 req = operations.GetAllRulesRequest(
     context_id='dolor',
 )
@@ -257,7 +254,6 @@ import sdk
 from sdk.models import operations
 
 s = sdk.SDK()
-
 
 req = operations.RemoveRuleRequest(
     context_id='necessitatibus',
@@ -283,7 +279,6 @@ import sdk
 from sdk.models import operations, shared
 
 s = sdk.SDK()
-
 
 req = operations.ReplaceRuleRequest(
     replace_rule_input=shared.ReplaceRuleInput(

@@ -22,6 +22,7 @@ class ContextID:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def add_rule(self, request: operations.AddRuleRequest, security: operations.AddRuleSecurity) -> operations.AddRuleResponse:
         r"""Adds a new rule to the context"""
         base_url = self._server_url
@@ -47,6 +48,7 @@ class ContextID:
 
         return res
 
+    
     def evaluate_rules(self, request: operations.EvaluateRulesRequest, security: operations.EvaluateRulesSecurity) -> operations.EvaluateRulesResponse:
         r"""Evaluate rules within a context on the provided object"""
         base_url = self._server_url
@@ -72,6 +74,7 @@ class ContextID:
 
         return res
 
+    
     def get_all_rules(self, request: operations.GetAllRulesRequest, security: operations.GetAllRulesSecurity) -> operations.GetAllRulesResponse:
         r"""Returns all rules with the context"""
         base_url = self._server_url
@@ -93,6 +96,7 @@ class ContextID:
 
         return res
 
+    
     def remove_rule(self, request: operations.RemoveRuleRequest, security: operations.RemoveRuleSecurity) -> operations.RemoveRuleResponse:
         r"""Removes a rule from the context"""
         base_url = self._server_url
@@ -110,6 +114,7 @@ class ContextID:
 
         return res
 
+    
     def replace_rule(self, request: operations.ReplaceRuleRequest, security: operations.ReplaceRuleSecurity) -> operations.ReplaceRuleResponse:
         r"""Replaces an existing rule within the context"""
         base_url = self._server_url
