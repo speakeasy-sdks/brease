@@ -13,6 +13,7 @@ public class ReplaceRuleResponse {
      */
     
     public industries.dot.brease.models.shared.ApiReplaceRuleResponse apiReplaceRuleResponse;
+
     public ReplaceRuleResponse withApiReplaceRuleResponse(industries.dot.brease.models.shared.ApiReplaceRuleResponse apiReplaceRuleResponse) {
         this.apiReplaceRuleResponse = apiReplaceRuleResponse;
         return this;
@@ -20,6 +21,7 @@ public class ReplaceRuleResponse {
     
     
     public String contentType;
+
     public ReplaceRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -27,6 +29,7 @@ public class ReplaceRuleResponse {
     
     
     public Integer statusCode;
+
     public ReplaceRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,6 +37,7 @@ public class ReplaceRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReplaceRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;

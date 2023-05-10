@@ -15,6 +15,7 @@ public class ApiEvaluateRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ModelsEvaluationResult[] results;
+
     public ApiEvaluateRulesResponse withResults(ModelsEvaluationResult[] results) {
         this.results = results;
         return this;

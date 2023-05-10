@@ -10,6 +10,7 @@ import industries.dot.brease.utils.SpeakeasyMetadata;
 public class ReplaceRuleRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public industries.dot.brease.models.shared.ReplaceRuleInput replaceRuleInput;
+
     public ReplaceRuleRequest withReplaceRuleInput(industries.dot.brease.models.shared.ReplaceRuleInput replaceRuleInput) {
         this.replaceRuleInput = replaceRuleInput;
         return this;
@@ -17,6 +18,7 @@ public class ReplaceRuleRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contextID")
     public String contextID;
+
     public ReplaceRuleRequest withContextID(String contextID) {
         this.contextID = contextID;
         return this;
@@ -24,6 +26,7 @@ public class ReplaceRuleRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ReplaceRuleRequest withId(String id) {
         this.id = id;
         return this;

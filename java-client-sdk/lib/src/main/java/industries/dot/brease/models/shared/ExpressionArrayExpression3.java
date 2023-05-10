@@ -12,6 +12,7 @@ public class ExpressionArrayExpression3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public Condition condition;
+
     public ExpressionArrayExpression3 withCondition(Condition condition) {
         this.condition = condition;
         return this;

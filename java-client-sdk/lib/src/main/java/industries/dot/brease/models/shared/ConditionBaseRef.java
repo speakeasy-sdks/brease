@@ -12,6 +12,7 @@ public class ConditionBaseRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dst")
     public String dst;
+
     public ConditionBaseRef withDst(String dst) {
         this.dst = dst;
         return this;
@@ -20,6 +21,7 @@ public class ConditionBaseRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("src")
     public String src;
+
     public ConditionBaseRef withSrc(String src) {
         this.src = src;
         return this;

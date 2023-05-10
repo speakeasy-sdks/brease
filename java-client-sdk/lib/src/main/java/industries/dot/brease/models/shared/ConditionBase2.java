@@ -12,6 +12,7 @@ public class ConditionBase2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ref")
     public ConditionBaseRef ref;
+
     public ConditionBase2 withRef(ConditionBaseRef ref) {
         this.ref = ref;
         return this;

@@ -12,6 +12,7 @@ public class ModelsEvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public ModelsEvaluationResult withValue(String value) {
         this.value = value;
         return this;
@@ -20,6 +21,7 @@ public class ModelsEvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public ModelsEvaluationResult withAction(String action) {
         this.action = action;
         return this;
@@ -28,6 +30,7 @@ public class ModelsEvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionTargetType")
     public String actionTargetType;
+
     public ModelsEvaluationResult withActionTargetType(String actionTargetType) {
         this.actionTargetType = actionTargetType;
         return this;
@@ -36,6 +39,7 @@ public class ModelsEvaluationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetID")
     public String targetID;
+
     public ModelsEvaluationResult withTargetID(String targetID) {
         this.targetID = targetID;
         return this;

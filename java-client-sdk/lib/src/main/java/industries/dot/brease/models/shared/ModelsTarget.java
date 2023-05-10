@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModelsTarget {
     @JsonProperty("target")
     public String target;
+
     public ModelsTarget withTarget(String target) {
         this.target = target;
         return this;
@@ -19,6 +20,7 @@ public class ModelsTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetValue")
     public String targetValue;
+
     public ModelsTarget withTargetValue(String targetValue) {
         this.targetValue = targetValue;
         return this;
@@ -26,6 +28,7 @@ public class ModelsTarget {
     
     @JsonProperty("type")
     public String type;
+
     public ModelsTarget withType(String type) {
         this.type = type;
         return this;

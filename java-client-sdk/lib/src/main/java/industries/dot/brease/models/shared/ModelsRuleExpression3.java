@@ -12,6 +12,7 @@ public class ModelsRuleExpression3 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public Condition condition;
+
     public ModelsRuleExpression3 withCondition(Condition condition) {
         this.condition = condition;
         return this;

@@ -13,6 +13,7 @@ public class EvaluateRulesResponse {
      */
     
     public industries.dot.brease.models.shared.ApiEvaluateRulesResponse apiEvaluateRulesResponse;
+
     public EvaluateRulesResponse withApiEvaluateRulesResponse(industries.dot.brease.models.shared.ApiEvaluateRulesResponse apiEvaluateRulesResponse) {
         this.apiEvaluateRulesResponse = apiEvaluateRulesResponse;
         return this;
@@ -20,6 +21,7 @@ public class EvaluateRulesResponse {
     
     
     public String contentType;
+
     public EvaluateRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -27,6 +29,7 @@ public class EvaluateRulesResponse {
     
     
     public Integer statusCode;
+
     public EvaluateRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,6 +37,7 @@ public class EvaluateRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EvaluateRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;

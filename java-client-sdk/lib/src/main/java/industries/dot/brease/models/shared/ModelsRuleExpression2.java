@@ -12,6 +12,7 @@ public class ModelsRuleExpression2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("or")
     public ExpressionArray or;
+
     public ModelsRuleExpression2 withOr(ExpressionArray or) {
         this.or = or;
         return this;

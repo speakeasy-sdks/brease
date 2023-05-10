@@ -10,6 +10,7 @@ import industries.dot.brease.utils.SpeakeasyMetadata;
 public class EvaluateRulesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public industries.dot.brease.models.shared.EvaluateRulesInput evaluateRulesInput;
+
     public EvaluateRulesRequest withEvaluateRulesInput(industries.dot.brease.models.shared.EvaluateRulesInput evaluateRulesInput) {
         this.evaluateRulesInput = evaluateRulesInput;
         return this;
@@ -17,6 +18,7 @@ public class EvaluateRulesRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contextID")
     public String contextID;
+
     public EvaluateRulesRequest withContextID(String contextID) {
         this.contextID = contextID;
         return this;

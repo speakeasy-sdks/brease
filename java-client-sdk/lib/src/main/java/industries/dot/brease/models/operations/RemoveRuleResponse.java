@@ -10,6 +10,7 @@ import java.net.http.HttpResponse;
 public class RemoveRuleResponse {
     
     public String contentType;
+
     public RemoveRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -17,6 +18,7 @@ public class RemoveRuleResponse {
     
     
     public Integer statusCode;
+
     public RemoveRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -24,6 +26,7 @@ public class RemoveRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;

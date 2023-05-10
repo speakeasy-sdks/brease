@@ -10,6 +10,7 @@ import industries.dot.brease.utils.SpeakeasyMetadata;
 public class RemoveRuleRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contextID")
     public String contextID;
+
     public RemoveRuleRequest withContextID(String contextID) {
         this.contextID = contextID;
         return this;
@@ -17,6 +18,7 @@ public class RemoveRuleRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public RemoveRuleRequest withId(String id) {
         this.id = id;
         return this;

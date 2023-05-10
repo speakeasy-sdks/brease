@@ -10,6 +10,7 @@ import industries.dot.brease.utils.SpeakeasyMetadata;
 public class GetAllRulesRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contextID")
     public String contextID;
+
     public GetAllRulesRequest withContextID(String contextID) {
         this.contextID = contextID;
         return this;

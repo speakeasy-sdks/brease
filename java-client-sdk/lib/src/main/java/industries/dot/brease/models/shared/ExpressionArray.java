@@ -12,6 +12,7 @@ public class ExpressionArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public Object[] expression;
+
     public ExpressionArray withExpression(Object[] expression) {
         this.expression = expression;
         return this;

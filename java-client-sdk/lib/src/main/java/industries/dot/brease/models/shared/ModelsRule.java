@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModelsRule {
     @JsonProperty("action")
     public String action;
+
     public ModelsRule withAction(String action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class ModelsRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ModelsRule withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class ModelsRule {
     
     @JsonProperty("expression")
     public Object expression;
+
     public ModelsRule withExpression(Object expression) {
         this.expression = expression;
         return this;
@@ -33,6 +36,7 @@ public class ModelsRule {
     
     @JsonProperty("id")
     public String id;
+
     public ModelsRule withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +44,7 @@ public class ModelsRule {
     
     @JsonProperty("target")
     public ModelsTarget target;
+
     public ModelsRule withTarget(ModelsTarget target) {
         this.target = target;
         return this;

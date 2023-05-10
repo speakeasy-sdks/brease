@@ -13,6 +13,7 @@ public class AddRuleResponse {
      */
     
     public industries.dot.brease.models.shared.ApiAddRuleResponse apiAddRuleResponse;
+
     public AddRuleResponse withApiAddRuleResponse(industries.dot.brease.models.shared.ApiAddRuleResponse apiAddRuleResponse) {
         this.apiAddRuleResponse = apiAddRuleResponse;
         return this;
@@ -20,6 +21,7 @@ public class AddRuleResponse {
     
     
     public String contentType;
+
     public AddRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -27,6 +29,7 @@ public class AddRuleResponse {
     
     
     public Integer statusCode;
+
     public AddRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,6 +37,7 @@ public class AddRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;

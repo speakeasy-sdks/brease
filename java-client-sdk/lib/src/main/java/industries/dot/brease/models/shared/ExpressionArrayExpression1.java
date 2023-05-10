@@ -12,6 +12,7 @@ public class ExpressionArrayExpression1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("and")
     public ExpressionArray and;
+
     public ExpressionArrayExpression1 withAnd(ExpressionArray and) {
         this.and = and;
         return this;

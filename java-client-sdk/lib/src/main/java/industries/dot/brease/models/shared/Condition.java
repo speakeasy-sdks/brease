@@ -12,6 +12,7 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base")
     public Object base;
+
     public Condition withBase(Object base) {
         this.base = base;
         return this;
@@ -20,6 +21,7 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public Object parameter;
+
     public Condition withParameter(Object parameter) {
         this.parameter = parameter;
         return this;
@@ -28,6 +30,7 @@ public class Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ConditionTypeEnum type;
+
     public Condition withType(ConditionTypeEnum type) {
         this.type = type;
         return this;

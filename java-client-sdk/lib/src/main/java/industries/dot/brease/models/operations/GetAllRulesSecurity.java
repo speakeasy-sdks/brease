@@ -10,6 +10,7 @@ import industries.dot.brease.utils.SpeakeasyMetadata;
 public class GetAllRulesSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String apiToken;
+
     public GetAllRulesSecurity withApiToken(String apiToken) {
         this.apiToken = apiToken;
         return this;

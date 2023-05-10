@@ -15,6 +15,7 @@ public class ApiAddRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public ModelsRule rule;
+
     public ApiAddRuleResponse withRule(ModelsRule rule) {
         this.rule = rule;
         return this;

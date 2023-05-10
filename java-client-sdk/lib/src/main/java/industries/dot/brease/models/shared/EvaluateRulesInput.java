@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EvaluateRulesInput {
     @JsonProperty("object")
     public java.util.Map<String, Object> object;
+
     public EvaluateRulesInput withObject(java.util.Map<String, Object> object) {
         this.object = object;
         return this;
@@ -19,6 +20,7 @@ public class EvaluateRulesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideCode")
     public String overrideCode;
+
     public EvaluateRulesInput withOverrideCode(String overrideCode) {
         this.overrideCode = overrideCode;
         return this;
@@ -27,6 +29,7 @@ public class EvaluateRulesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideRules")
     public ModelsRule[] overrideRules;
+
     public EvaluateRulesInput withOverrideRules(ModelsRule[] overrideRules) {
         this.overrideRules = overrideRules;
         return this;
