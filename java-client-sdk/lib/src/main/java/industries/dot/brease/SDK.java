@@ -36,7 +36,7 @@ public class SDK {
 	private String _serverUrl;
 	private String _language = "java";
 	private String _sdkVersion = "0.2.2";
-	private String _genVersion = "2.26.2";
+	private String _genVersion = "2.26.3";
 	/**
 	 * The Builder class allows the configuration of a new instance of the SDK.
 	 */
