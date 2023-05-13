@@ -34,7 +34,7 @@ req = operations.AddRuleRequest(
 )
 
 res = s.context_id.add_rule(req, operations.AddRuleSecurity(
-    api_token="Bearer YOUR_BEARER_TOKEN_HERE",
+    api_token="YOUR_BEARER_TOKEN_HERE",
 ))
 
 if res.api_add_rule_response is not None:

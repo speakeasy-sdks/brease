@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'industries.dot.brease:brease-sdk:0.2.2'
+implementation 'industries.dot.brease:brease-sdk:0.3.0'
 ```
 <!-- End SDK Installation -->
 
@@ -63,7 +63,7 @@ public class Application {
             }};            
 
             AddRuleResponse res = sdk.contextID.addRule(req, new AddRuleSecurity("magnam") {{
-                apiToken = "Bearer YOUR_BEARER_TOKEN_HERE";
+                apiToken = "YOUR_BEARER_TOKEN_HERE";
             }});
 
             if (res.apiAddRuleResponse != null) {

@@ -49,7 +49,7 @@ func main() {
         },
         ContextID: "dolor",
     }, operations.AddRuleSecurity{
-        APIToken: "Bearer YOUR_BEARER_TOKEN_HERE",
+        APIToken: "YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
         log.Fatal(err)
@@ -117,7 +117,7 @@ func main() {
         },
         ContextID: "corporis",
     }, operations.EvaluateRulesSecurity{
-        APIToken: "Bearer YOUR_BEARER_TOKEN_HERE",
+        APIToken: "YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
         log.Fatal(err)
@@ -152,7 +152,7 @@ func main() {
     res, err := s.ContextID.GetAllRules(ctx, operations.GetAllRulesRequest{
         ContextID: "dolore",
     }, operations.GetAllRulesSecurity{
-        APIToken: "Bearer YOUR_BEARER_TOKEN_HERE",
+        APIToken: "YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
         log.Fatal(err)
@@ -188,7 +188,7 @@ func main() {
         ContextID: "iusto",
         ID: "1b5e6e13-b99d-4488-a1e9-1e450ad2abd4",
     }, operations.RemoveRuleSecurity{
-        APIToken: "Bearer YOUR_BEARER_TOKEN_HERE",
+        APIToken: "YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
         log.Fatal(err)
@@ -238,7 +238,7 @@ func main() {
         ContextID: "dicta",
         ID: "4cd66ae3-95ef-4b9b-a88f-3a66997074ba",
     }, operations.ReplaceRuleSecurity{
-        APIToken: "Bearer YOUR_BEARER_TOKEN_HERE",
+        APIToken: "YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
         log.Fatal(err)

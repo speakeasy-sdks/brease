@@ -52,7 +52,7 @@ sdk.contextID.addRule({
   },
   contextID: "quod",
 }, {
-  apiToken: "Bearer YOUR_BEARER_TOKEN_HERE",
+  apiToken: "YOUR_BEARER_TOKEN_HERE",
 }).then((res: AddRuleResponse) => {
   if (res.statusCode == 200) {
     // handle response
