@@ -48,7 +48,7 @@ export class SDK {
   public _serverURL: string;
   private _language = "typescript";
   private _sdkVersion = "0.2.0";
-  private _genVersion = "2.27.0";
+  private _genVersion = "2.28.0";
   private _globals: any;
 
   constructor(props?: SDKProps) {
