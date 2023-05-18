@@ -50,6 +50,7 @@ public class ContextID {
         SerializedBody serializedRequestBody = industries.dot.brease.utils.Utils.serializeRequestBody(request, "addRuleInput", "json");
         req.setBody(serializedRequestBody);
         
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
         
         HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
@@ -90,6 +91,7 @@ public class ContextID {
         SerializedBody serializedRequestBody = industries.dot.brease.utils.Utils.serializeRequestBody(request, "evaluateRulesInput", "json");
         req.setBody(serializedRequestBody);
         
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
         
         HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
@@ -128,6 +130,7 @@ public class ContextID {
         req.setMethod("GET");
         req.setURL(url);
         
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
         
         HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
@@ -166,6 +169,7 @@ public class ContextID {
         req.setMethod("DELETE");
         req.setURL(url);
         
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
         
         HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
@@ -200,6 +204,7 @@ public class ContextID {
         SerializedBody serializedRequestBody = industries.dot.brease.utils.Utils.serializeRequestBody(request, "replaceRuleInput", "json");
         req.setBody(serializedRequestBody);
         
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
         
         HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this._defaultClient, security);
         

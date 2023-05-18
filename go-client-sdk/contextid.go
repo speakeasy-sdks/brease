@@ -49,6 +49,7 @@ func (s *contextID) AddRule(ctx context.Context, request operations.AddRuleReque
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
+	req.Header.Set("user-agent", fmt.Sprintf("speakeasy-sdk/%s %s %s", s.language, s.sdkVersion, s.genVersion))
 
 	req.Header.Set("Content-Type", reqContentType)
 
@@ -103,6 +104,7 @@ func (s *contextID) EvaluateRules(ctx context.Context, request operations.Evalua
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
+	req.Header.Set("user-agent", fmt.Sprintf("speakeasy-sdk/%s %s %s", s.language, s.sdkVersion, s.genVersion))
 
 	req.Header.Set("Content-Type", reqContentType)
 
@@ -152,6 +154,7 @@ func (s *contextID) GetAllRules(ctx context.Context, request operations.GetAllRu
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
+	req.Header.Set("user-agent", fmt.Sprintf("speakeasy-sdk/%s %s %s", s.language, s.sdkVersion, s.genVersion))
 
 	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
@@ -199,6 +202,7 @@ func (s *contextID) RemoveRule(ctx context.Context, request operations.RemoveRul
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
+	req.Header.Set("user-agent", fmt.Sprintf("speakeasy-sdk/%s %s %s", s.language, s.sdkVersion, s.genVersion))
 
 	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
@@ -242,6 +246,7 @@ func (s *contextID) ReplaceRule(ctx context.Context, request operations.ReplaceR
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
+	req.Header.Set("user-agent", fmt.Sprintf("speakeasy-sdk/%s %s %s", s.language, s.sdkVersion, s.genVersion))
 
 	req.Header.Set("Content-Type", reqContentType)
 
