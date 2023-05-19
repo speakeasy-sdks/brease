@@ -18,7 +18,7 @@ src/sdk/models/shared/modelsrule.py
 src/sdk/models/shared/modelstarget.py
 src/sdk/models/shared/expressionarray.py
 src/sdk/models/shared/condition.py
-src/sdk/models/shared/conditiontype_enum.py
+src/sdk/models/shared/conditiontype.py
 src/sdk/models/shared/conditionbasekey.py
 src/sdk/models/shared/conditionbaseref.py
 src/sdk/models/shared/addruleinput.py

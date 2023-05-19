@@ -5,5 +5,5 @@ package shared
 type Condition struct {
 	Base      *ConditionBase      `json:"base,omitempty"`
 	Parameter *ConditionParameter `json:"parameter,omitempty"`
-	Type      *ConditionTypeEnum  `json:"type,omitempty"`
+	Type      *ConditionType      `json:"type,omitempty"`
 }

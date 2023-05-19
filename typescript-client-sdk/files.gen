@@ -29,7 +29,7 @@ src/sdk/models/shared/modelsrule.ts
 src/sdk/models/shared/modelstarget.ts
 src/sdk/models/shared/expressionarray.ts
 src/sdk/models/shared/condition.ts
-src/sdk/models/shared/conditiontypeenum.ts
+src/sdk/models/shared/conditiontype.ts
 src/sdk/models/shared/conditionbasekey.ts
 src/sdk/models/shared/conditionbaseref.ts
 src/sdk/models/shared/addruleinput.ts

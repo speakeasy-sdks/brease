@@ -4,7 +4,7 @@
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { ConditionBaseRef } from "./conditionbaseref";
-import { ConditionTypeEnum } from "./conditiontypeenum";
+import { ConditionType } from "./conditiontype";
 import { Expose, Type } from "class-transformer";
 
 export class ConditionBase2 extends SpeakeasyBase {
@@ -25,5 +25,5 @@ export class Condition extends SpeakeasyBase {
 
   @SpeakeasyMetadata()
   @Expose({ name: "type" })
-  type?: ConditionTypeEnum;
+  type?: ConditionType;
 }

@@ -21,7 +21,7 @@ Adds a new rule to the context
 ```typescript
 import { SDK } from "brease-sdk";
 import { AddRuleResponse } from "brease-sdk/dist/sdk/models/operations";
-import { ConditionTypeEnum } from "brease-sdk/dist/sdk/models/shared";
+import { ConditionType } from "brease-sdk/dist/sdk/models/shared";
 
 const sdk = new SDK();
 
@@ -39,7 +39,7 @@ sdk.contextID.addRule({
                   key: "nam",
                 },
                 parameter: false,
-                type: ConditionTypeEnum.Sx,
+                type: ConditionType.Sx,
               },
             },
             {
@@ -57,7 +57,7 @@ sdk.contextID.addRule({
                   },
                 },
                 parameter: false,
-                type: ConditionTypeEnum.Npx,
+                type: ConditionType.Npx,
               },
             },
           ],
@@ -90,7 +90,7 @@ Evaluate rules within a context on the provided object
 ```typescript
 import { SDK } from "brease-sdk";
 import { EvaluateRulesResponse } from "brease-sdk/dist/sdk/models/operations";
-import { ConditionTypeEnum } from "brease-sdk/dist/sdk/models/shared";
+import { ConditionType } from "brease-sdk/dist/sdk/models/shared";
 
 const sdk = new SDK();
 
@@ -122,7 +122,7 @@ sdk.contextID.evaluateRules({
                     },
                   },
                   parameter: false,
-                  type: ConditionTypeEnum.Npx,
+                  type: ConditionType.Npx,
                 },
               },
               {
@@ -172,7 +172,7 @@ sdk.contextID.evaluateRules({
                     key: "alias",
                   },
                   parameter: "dolorum",
-                  type: ConditionTypeEnum.Sx,
+                  type: ConditionType.Sx,
                 },
               },
             ],
@@ -197,7 +197,7 @@ sdk.contextID.evaluateRules({
               },
             },
             parameter: false,
-            type: ConditionTypeEnum.Sx,
+            type: ConditionType.Sx,
           },
         },
         id: "f3a66997-074b-4a44-a9b6-e2141959890a",
@@ -275,7 +275,7 @@ Replaces an existing rule within the context
 ```typescript
 import { SDK } from "brease-sdk";
 import { ReplaceRuleResponse } from "brease-sdk/dist/sdk/models/operations";
-import { ConditionTypeEnum } from "brease-sdk/dist/sdk/models/shared";
+import { ConditionType } from "brease-sdk/dist/sdk/models/shared";
 
 const sdk = new SDK();
 

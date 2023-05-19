@@ -76,6 +76,7 @@ export class ContextID {
     );
 
     const headers = { ...reqBodyHeaders, ...config?.headers };
+    headers["Accept"] = "application/json";
     headers[
       "user-agent"
     ] = `speakeasy-sdk/${this._language} ${this._sdkVersion} ${this._genVersion}`;
@@ -156,6 +157,7 @@ export class ContextID {
     );
 
     const headers = { ...reqBodyHeaders, ...config?.headers };
+    headers["Accept"] = "application/json";
     headers[
       "user-agent"
     ] = `speakeasy-sdk/${this._language} ${this._sdkVersion} ${this._genVersion}`;
@@ -219,6 +221,7 @@ export class ContextID {
     );
 
     const headers = { ...config?.headers };
+    headers["Accept"] = "application/json";
     headers[
       "user-agent"
     ] = `speakeasy-sdk/${this._language} ${this._sdkVersion} ${this._genVersion}`;
@@ -285,6 +288,7 @@ export class ContextID {
     );
 
     const headers = { ...config?.headers };
+    headers["Accept"] = "*/*";
     headers[
       "user-agent"
     ] = `speakeasy-sdk/${this._language} ${this._sdkVersion} ${this._genVersion}`;
@@ -359,6 +363,7 @@ export class ContextID {
     );
 
     const headers = { ...reqBodyHeaders, ...config?.headers };
+    headers["Accept"] = "application/json";
     headers[
       "user-agent"
     ] = `speakeasy-sdk/${this._language} ${this._sdkVersion} ${this._genVersion}`;

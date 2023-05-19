@@ -8,7 +8,7 @@ from .apireplaceruleresponse import *
 from .condition import *
 from .conditionbasekey import *
 from .conditionbaseref import *
-from .conditiontype_enum import *
+from .conditiontype import *
 from .evaluaterulesinput import *
 from .expressionarray import *
 from .modelsevaluationresult import *
@@ -16,4 +16,4 @@ from .modelsrule import *
 from .modelstarget import *
 from .replaceruleinput import *
 
-__all__ = ["APIAddRuleResponse","APIAllRulesResponse","APIEvaluateRulesResponse","APIReplaceRuleResponse","AddRuleInput","Condition","ConditionBase2","ConditionBaseKey","ConditionBaseRef","ConditionTypeEnum","EvaluateRulesInput","ExpressionArray","ExpressionArrayExpression1","ExpressionArrayExpression2","ExpressionArrayExpression3","ModelsEvaluationResult","ModelsRule","ModelsRuleExpression1","ModelsRuleExpression2","ModelsRuleExpression3","ModelsTarget","ReplaceRuleInput"]
+__all__ = ["APIAddRuleResponse","APIAllRulesResponse","APIEvaluateRulesResponse","APIReplaceRuleResponse","AddRuleInput","Condition","ConditionBase2","ConditionBaseKey","ConditionBaseRef","ConditionType","EvaluateRulesInput","ExpressionArray","ExpressionArrayExpression1","ExpressionArrayExpression2","ExpressionArrayExpression3","ModelsEvaluationResult","ModelsRule","ModelsRuleExpression1","ModelsRuleExpression2","ModelsRuleExpression3","ModelsTarget","ReplaceRuleInput"]

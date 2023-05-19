@@ -30,7 +30,7 @@ req = operations.AddRuleRequest(
                         ),
                     ),
                     parameter=False,
-                    type=shared.ConditionTypeEnum.RGX,
+                    type=shared.ConditionType.RGX,
                 ),
             ),
             id='69a674e0-f467-4cc8-b96e-d151a05dfc2d',

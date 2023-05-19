@@ -29,9 +29,9 @@ public class Condition {
     
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    public ConditionTypeEnum type;
+    public ConditionType type;
 
-    public Condition withType(ConditionTypeEnum type) {
+    public Condition withType(ConditionType type) {
         this.type = type;
         return this;
     }

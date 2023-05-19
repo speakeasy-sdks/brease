@@ -57,7 +57,7 @@ lib/src/main/java/industries/dot/brease/models/shared/ExpressionArrayExpression1
 lib/src/main/java/industries/dot/brease/models/shared/ExpressionArray.java
 lib/src/main/java/industries/dot/brease/models/shared/ConditionBase2.java
 lib/src/main/java/industries/dot/brease/models/shared/Condition.java
-lib/src/main/java/industries/dot/brease/models/shared/ConditionTypeEnum.java
+lib/src/main/java/industries/dot/brease/models/shared/ConditionType.java
 lib/src/main/java/industries/dot/brease/models/shared/ConditionBaseKey.java
 lib/src/main/java/industries/dot/brease/models/shared/ConditionBaseRef.java
 lib/src/main/java/industries/dot/brease/models/shared/AddRuleInput.java

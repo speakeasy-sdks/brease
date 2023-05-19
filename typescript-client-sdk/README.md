@@ -21,7 +21,7 @@ yarn add brease-sdk
 ```typescript
 import { SDK } from "brease-sdk";
 import { AddRuleResponse } from "brease-sdk/dist/sdk/models/operations";
-import { ConditionTypeEnum } from "brease-sdk/dist/sdk/models/shared";
+import { ConditionType } from "brease-sdk/dist/sdk/models/shared";
 
 const sdk = new SDK();
 
@@ -39,7 +39,7 @@ sdk.contextID.addRule({
             },
           },
           parameter: false,
-          type: ConditionTypeEnum.Rgx,
+          type: ConditionType.Rgx,
         },
       },
       id: "69a674e0-f467-4cc8-b96e-d151a05dfc2d",

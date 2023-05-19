@@ -24,7 +24,7 @@ import industries.dot.brease.models.shared.Condition;
 import industries.dot.brease.models.shared.ConditionBase2;
 import industries.dot.brease.models.shared.ConditionBaseKey;
 import industries.dot.brease.models.shared.ConditionBaseRef;
-import industries.dot.brease.models.shared.ConditionTypeEnum;
+import industries.dot.brease.models.shared.ConditionType;
 import industries.dot.brease.models.shared.ExpressionArray;
 import industries.dot.brease.models.shared.ExpressionArrayExpression1;
 import industries.dot.brease.models.shared.ExpressionArrayExpression2;
@@ -52,7 +52,7 @@ public class Application {
                                                 }};
                                             }};
                                             parameter = false;
-                                            type = ConditionTypeEnum.RGX;
+                                            type = ConditionType.RGX;
                                         }};
                                     }}, "vel",                 new ModelsTarget("error", "deserunt") {{
                                         targetValue = "suscipit";

@@ -25,7 +25,7 @@ pkg/models/shared/modelstarget.go
 pkg/models/shared/expression.go
 pkg/models/shared/expressionarray.go
 pkg/models/shared/condition.go
-pkg/models/shared/conditiontypeenum.go
+pkg/models/shared/conditiontype.go
 pkg/models/shared/conditionparameter.go
 pkg/models/shared/conditionbase.go
 pkg/models/shared/conditionbasekey.go

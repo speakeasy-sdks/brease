@@ -10,7 +10,7 @@ export * from "./apireplaceruleresponse";
 export * from "./condition";
 export * from "./conditionbasekey";
 export * from "./conditionbaseref";
-export * from "./conditiontypeenum";
+export * from "./conditiontype";
 export * from "./evaluaterulesinput";
 export * from "./expressionarray";
 export * from "./modelsevaluationresult";

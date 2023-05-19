@@ -171,3 +171,13 @@ Based on:
 - [PyPI v1.2.0] https://pypi.org/project/brease-sdk/1.2.0 - python-client-sdk
 - [NPM v0.3.0] https://www.npmjs.com/package/brease-sdk/v/0.3.0 - typescript-client-sdk
 - [Go v0.6.0] https://github.com/speakeasy-sdks/brease/releases/tag/go-client-sdk/v0.6.0 - go-client-sdk
+
+## 2023-05-19 00:41:48
+### Changes
+Based on:
+- OpenAPI Doc 0.1.0 https://prod.speakeasyapi.dev/v1/apis/brease/version/0.1/schema/download
+- Speakeasy CLI 1.35.0 (2.31.0) https://github.com/speakeasy-api/speakeasy
+### Releases
+- [Go v0.6.0] https://github.com/speakeasy-sdks/brease/releases/tag/go-client-sdk/v0.6.0 - go-client-sdk
+- [PyPI v1.3.0] https://pypi.org/project/brease-sdk/1.3.0 - python-client-sdk
+- [NPM v0.3.0] https://www.npmjs.com/package/brease-sdk/v/0.3.0 - typescript-client-sdk

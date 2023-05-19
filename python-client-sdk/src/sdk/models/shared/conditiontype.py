@@ -3,7 +3,7 @@
 from __future__ import annotations
 from enum import Enum
 
-class ConditionTypeEnum(str, Enum):
+class ConditionType(str, Enum):
     E = 'e'
     HV = 'hv'
     EQ = 'eq'

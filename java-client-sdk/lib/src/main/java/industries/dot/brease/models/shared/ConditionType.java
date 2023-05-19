@@ -6,7 +6,7 @@ package industries.dot.brease.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-public enum ConditionTypeEnum {
+public enum ConditionType {
     E("e"),
     HV("hv"),
     EQ("eq"),
@@ -23,7 +23,7 @@ public enum ConditionTypeEnum {
     @JsonValue
     public final String value;
 
-    private ConditionTypeEnum(String value) {
+    private ConditionType(String value) {
         this.value = value;
     }
 }
