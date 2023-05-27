@@ -7,32 +7,30 @@ import * as shared from "../shared";
 import { AxiosResponse } from "axios";
 
 export class GetAllRulesSecurity extends SpeakeasyBase {
-  @SpeakeasyMetadata({
-    data: "security, scheme=true;type=http;subtype=bearer;name=Authorization",
-  })
-  apiToken: string;
+    @SpeakeasyMetadata({
+        data: "security, scheme=true;type=http;subtype=bearer;name=Authorization",
+    })
+    apiToken: string;
 }
 
 export class GetAllRulesRequest extends SpeakeasyBase {
-  @SpeakeasyMetadata({
-    data: "pathParam, style=simple;explode=false;name=contextID",
-  })
-  contextID: string;
+    @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=contextID" })
+    contextID: string;
 }
 
 export class GetAllRulesResponse extends SpeakeasyBase {
-  /**
-   * OK
-   */
-  @SpeakeasyMetadata()
-  apiAllRulesResponse?: shared.ApiAllRulesResponse;
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata()
+    apiAllRulesResponse?: shared.ApiAllRulesResponse;
 
-  @SpeakeasyMetadata()
-  contentType: string;
+    @SpeakeasyMetadata()
+    contentType: string;
 
-  @SpeakeasyMetadata()
-  statusCode: number;
+    @SpeakeasyMetadata()
+    statusCode: number;
 
-  @SpeakeasyMetadata()
-  rawResponse?: AxiosResponse;
+    @SpeakeasyMetadata()
+    rawResponse?: AxiosResponse;
 }

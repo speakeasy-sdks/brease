@@ -6,8 +6,10 @@ import (
 	"brease/pkg/models/operations"
 	"brease/pkg/models/shared"
 	"brease/pkg/utils"
+	"bytes"
 	"context"
 	"fmt"
+	"io"
 	"net/http"
 )
 
@@ -63,7 +65,13 @@ func (s *contextID) AddRule(ctx context.Context, request operations.AddRuleReque
 	if httpRes == nil {
 		return nil, fmt.Errorf("error sending request: no response")
 	}
-	defer httpRes.Body.Close()
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 
 	contentType := httpRes.Header.Get("Content-Type")
 
@@ -77,7 +85,7 @@ func (s *contextID) AddRule(ctx context.Context, request operations.AddRuleReque
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *shared.APIAddRuleResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
 
@@ -119,7 +127,13 @@ func (s *contextID) EvaluateRules(ctx context.Context, request operations.Evalua
 	if httpRes == nil {
 		return nil, fmt.Errorf("error sending request: no response")
 	}
-	defer httpRes.Body.Close()
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 
 	contentType := httpRes.Header.Get("Content-Type")
 
@@ -133,7 +147,7 @@ func (s *contextID) EvaluateRules(ctx context.Context, request operations.Evalua
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *shared.APIEvaluateRulesResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
 
@@ -168,7 +182,13 @@ func (s *contextID) GetAllRules(ctx context.Context, request operations.GetAllRu
 	if httpRes == nil {
 		return nil, fmt.Errorf("error sending request: no response")
 	}
-	defer httpRes.Body.Close()
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 
 	contentType := httpRes.Header.Get("Content-Type")
 
@@ -182,7 +202,7 @@ func (s *contextID) GetAllRules(ctx context.Context, request operations.GetAllRu
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *shared.APIAllRulesResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
 
@@ -217,7 +237,13 @@ func (s *contextID) RemoveRule(ctx context.Context, request operations.RemoveRul
 	if httpRes == nil {
 		return nil, fmt.Errorf("error sending request: no response")
 	}
-	defer httpRes.Body.Close()
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 
 	contentType := httpRes.Header.Get("Content-Type")
 
@@ -264,7 +290,13 @@ func (s *contextID) ReplaceRule(ctx context.Context, request operations.ReplaceR
 	if httpRes == nil {
 		return nil, fmt.Errorf("error sending request: no response")
 	}
-	defer httpRes.Body.Close()
+
+	rawBody, err := io.ReadAll(httpRes.Body)
+	if err != nil {
+		return nil, fmt.Errorf("error reading response body: %w", err)
+	}
+	httpRes.Body.Close()
+	httpRes.Body = io.NopCloser(bytes.NewBuffer(rawBody))
 
 	contentType := httpRes.Header.Get("Content-Type")
 
@@ -278,7 +310,7 @@ func (s *contextID) ReplaceRule(ctx context.Context, request operations.ReplaceR
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *shared.APIReplaceRuleResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out); err != nil {
 				return nil, err
 			}
 

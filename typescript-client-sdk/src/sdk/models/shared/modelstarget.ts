@@ -6,15 +6,15 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
 export class ModelsTarget extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  @Expose({ name: "target" })
-  target: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "target" })
+    target: string;
 
-  @SpeakeasyMetadata()
-  @Expose({ name: "targetValue" })
-  targetValue?: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "targetValue" })
+    targetValue?: string;
 
-  @SpeakeasyMetadata()
-  @Expose({ name: "type" })
-  type: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type: string;
 }

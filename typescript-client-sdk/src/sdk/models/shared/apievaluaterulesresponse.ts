@@ -10,8 +10,8 @@ import { Expose, Type } from "class-transformer";
  * OK
  */
 export class ApiEvaluateRulesResponse extends SpeakeasyBase {
-  @SpeakeasyMetadata({ elemType: ModelsEvaluationResult })
-  @Expose({ name: "results" })
-  @Type(() => ModelsEvaluationResult)
-  results?: ModelsEvaluationResult[];
+    @SpeakeasyMetadata({ elemType: ModelsEvaluationResult })
+    @Expose({ name: "results" })
+    @Type(() => ModelsEvaluationResult)
+    results?: ModelsEvaluationResult[];
 }

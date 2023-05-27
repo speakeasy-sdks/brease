@@ -10,12 +10,12 @@ import { Expose, Type } from "class-transformer";
  * OK
  */
 export class ApiAllRulesResponse extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  @Expose({ name: "code" })
-  code?: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "code" })
+    code?: string;
 
-  @SpeakeasyMetadata({ elemType: ModelsRule })
-  @Expose({ name: "rules" })
-  @Type(() => ModelsRule)
-  rules?: ModelsRule[];
+    @SpeakeasyMetadata({ elemType: ModelsRule })
+    @Expose({ name: "rules" })
+    @Type(() => ModelsRule)
+    rules?: ModelsRule[];
 }

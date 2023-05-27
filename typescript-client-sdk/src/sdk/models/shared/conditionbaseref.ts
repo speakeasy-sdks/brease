@@ -6,11 +6,11 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
 export class ConditionBaseRef extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  @Expose({ name: "dst" })
-  dst?: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "dst" })
+    dst?: string;
 
-  @SpeakeasyMetadata()
-  @Expose({ name: "src" })
-  src?: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "src" })
+    src?: string;
 }

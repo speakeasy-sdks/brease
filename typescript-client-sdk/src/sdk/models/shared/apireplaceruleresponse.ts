@@ -10,8 +10,8 @@ import { Expose, Type } from "class-transformer";
  * OK
  */
 export class ApiReplaceRuleResponse extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  @Expose({ name: "rule" })
-  @Type(() => ModelsRule)
-  rule?: ModelsRule;
+    @SpeakeasyMetadata()
+    @Expose({ name: "rule" })
+    @Type(() => ModelsRule)
+    rule?: ModelsRule;
 }

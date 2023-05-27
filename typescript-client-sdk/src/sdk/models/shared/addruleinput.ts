@@ -7,8 +7,8 @@ import { ModelsRule } from "./modelsrule";
 import { Expose, Type } from "class-transformer";
 
 export class AddRuleInput extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  @Expose({ name: "rule" })
-  @Type(() => ModelsRule)
-  rule?: ModelsRule;
+    @SpeakeasyMetadata()
+    @Expose({ name: "rule" })
+    @Type(() => ModelsRule)
+    rule?: ModelsRule;
 }

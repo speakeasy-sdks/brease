@@ -3,16 +3,16 @@
  */
 
 export enum ConditionType {
-  E = "e",
-  Hv = "hv",
-  Eq = "eq",
-  Neq = "neq",
-  Px = "px",
-  Npx = "npx",
-  Sx = "sx",
-  Nsx = "nsx",
-  In = "in",
-  Nin = "nin",
-  Rgx = "rgx",
-  Nrgx = "nrgx",
+    E = "e",
+    Hv = "hv",
+    Eq = "eq",
+    Neq = "neq",
+    Px = "px",
+    Npx = "npx",
+    Sx = "sx",
+    Nsx = "nsx",
+    In = "in",
+    Nin = "nin",
+    Rgx = "rgx",
+    Nrgx = "nrgx",
 }

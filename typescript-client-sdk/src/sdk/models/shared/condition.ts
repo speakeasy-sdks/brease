@@ -8,22 +8,22 @@ import { ConditionType } from "./conditiontype";
 import { Expose, Type } from "class-transformer";
 
 export class ConditionBase2 extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  @Expose({ name: "ref" })
-  @Type(() => ConditionBaseRef)
-  ref?: ConditionBaseRef;
+    @SpeakeasyMetadata()
+    @Expose({ name: "ref" })
+    @Type(() => ConditionBaseRef)
+    ref?: ConditionBaseRef;
 }
 
 export class Condition extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  @Expose({ name: "base" })
-  base?: any;
+    @SpeakeasyMetadata()
+    @Expose({ name: "base" })
+    base?: any;
 
-  @SpeakeasyMetadata()
-  @Expose({ name: "parameter" })
-  parameter?: any;
+    @SpeakeasyMetadata()
+    @Expose({ name: "parameter" })
+    parameter?: any;
 
-  @SpeakeasyMetadata()
-  @Expose({ name: "type" })
-  type?: ConditionType;
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: ConditionType;
 }

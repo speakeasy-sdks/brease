@@ -6,19 +6,19 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
 export class ModelsEvaluationResult extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  @Expose({ name: "Value" })
-  value?: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "Value" })
+    value?: string;
 
-  @SpeakeasyMetadata()
-  @Expose({ name: "action" })
-  action?: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "action" })
+    action?: string;
 
-  @SpeakeasyMetadata()
-  @Expose({ name: "actionTargetType" })
-  actionTargetType?: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "actionTargetType" })
+    actionTargetType?: string;
 
-  @SpeakeasyMetadata()
-  @Expose({ name: "targetID" })
-  targetID?: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "targetID" })
+    targetID?: string;
 }

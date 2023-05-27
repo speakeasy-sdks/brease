@@ -9,45 +9,45 @@ import { ModelsTarget } from "./modelstarget";
 import { Expose, Type } from "class-transformer";
 
 export class ModelsRuleExpression3 extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  @Expose({ name: "condition" })
-  @Type(() => Condition)
-  condition?: Condition;
+    @SpeakeasyMetadata()
+    @Expose({ name: "condition" })
+    @Type(() => Condition)
+    condition?: Condition;
 }
 
 export class ModelsRuleExpression2 extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  @Expose({ name: "or" })
-  @Type(() => ExpressionArray)
-  or?: ExpressionArray;
+    @SpeakeasyMetadata()
+    @Expose({ name: "or" })
+    @Type(() => ExpressionArray)
+    or?: ExpressionArray;
 }
 
 export class ModelsRuleExpression1 extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  @Expose({ name: "and" })
-  @Type(() => ExpressionArray)
-  and?: ExpressionArray;
+    @SpeakeasyMetadata()
+    @Expose({ name: "and" })
+    @Type(() => ExpressionArray)
+    and?: ExpressionArray;
 }
 
 export class ModelsRule extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  @Expose({ name: "action" })
-  action: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "action" })
+    action: string;
 
-  @SpeakeasyMetadata()
-  @Expose({ name: "description" })
-  description?: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "description" })
+    description?: string;
 
-  @SpeakeasyMetadata()
-  @Expose({ name: "expression" })
-  expression: any;
+    @SpeakeasyMetadata()
+    @Expose({ name: "expression" })
+    expression: any;
 
-  @SpeakeasyMetadata()
-  @Expose({ name: "id" })
-  id: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id: string;
 
-  @SpeakeasyMetadata()
-  @Expose({ name: "target" })
-  @Type(() => ModelsTarget)
-  target: ModelsTarget;
+    @SpeakeasyMetadata()
+    @Expose({ name: "target" })
+    @Type(() => ModelsTarget)
+    target: ModelsTarget;
 }

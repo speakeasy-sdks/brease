@@ -7,38 +7,36 @@ import * as shared from "../shared";
 import { AxiosResponse } from "axios";
 
 export class ReplaceRuleSecurity extends SpeakeasyBase {
-  @SpeakeasyMetadata({
-    data: "security, scheme=true;type=http;subtype=bearer;name=Authorization",
-  })
-  apiToken: string;
+    @SpeakeasyMetadata({
+        data: "security, scheme=true;type=http;subtype=bearer;name=Authorization",
+    })
+    apiToken: string;
 }
 
 export class ReplaceRuleRequest extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  replaceRuleInput?: shared.ReplaceRuleInput;
+    @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+    replaceRuleInput?: shared.ReplaceRuleInput;
 
-  @SpeakeasyMetadata({
-    data: "pathParam, style=simple;explode=false;name=contextID",
-  })
-  contextID: string;
+    @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=contextID" })
+    contextID: string;
 
-  @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
-  id: string;
+    @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
+    id: string;
 }
 
 export class ReplaceRuleResponse extends SpeakeasyBase {
-  /**
-   * OK
-   */
-  @SpeakeasyMetadata()
-  apiReplaceRuleResponse?: shared.ApiReplaceRuleResponse;
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata()
+    apiReplaceRuleResponse?: shared.ApiReplaceRuleResponse;
 
-  @SpeakeasyMetadata()
-  contentType: string;
+    @SpeakeasyMetadata()
+    contentType: string;
 
-  @SpeakeasyMetadata()
-  statusCode: number;
+    @SpeakeasyMetadata()
+    statusCode: number;
 
-  @SpeakeasyMetadata()
-  rawResponse?: AxiosResponse;
+    @SpeakeasyMetadata()
+    rawResponse?: AxiosResponse;
 }

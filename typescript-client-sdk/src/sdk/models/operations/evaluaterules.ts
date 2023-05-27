@@ -7,35 +7,33 @@ import * as shared from "../shared";
 import { AxiosResponse } from "axios";
 
 export class EvaluateRulesSecurity extends SpeakeasyBase {
-  @SpeakeasyMetadata({
-    data: "security, scheme=true;type=http;subtype=bearer;name=Authorization",
-  })
-  apiToken: string;
+    @SpeakeasyMetadata({
+        data: "security, scheme=true;type=http;subtype=bearer;name=Authorization",
+    })
+    apiToken: string;
 }
 
 export class EvaluateRulesRequest extends SpeakeasyBase {
-  @SpeakeasyMetadata({ data: "request, media_type=application/json" })
-  evaluateRulesInput?: shared.EvaluateRulesInput;
+    @SpeakeasyMetadata({ data: "request, media_type=application/json" })
+    evaluateRulesInput?: shared.EvaluateRulesInput;
 
-  @SpeakeasyMetadata({
-    data: "pathParam, style=simple;explode=false;name=contextID",
-  })
-  contextID: string;
+    @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=contextID" })
+    contextID: string;
 }
 
 export class EvaluateRulesResponse extends SpeakeasyBase {
-  /**
-   * OK
-   */
-  @SpeakeasyMetadata()
-  apiEvaluateRulesResponse?: shared.ApiEvaluateRulesResponse;
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata()
+    apiEvaluateRulesResponse?: shared.ApiEvaluateRulesResponse;
 
-  @SpeakeasyMetadata()
-  contentType: string;
+    @SpeakeasyMetadata()
+    contentType: string;
 
-  @SpeakeasyMetadata()
-  statusCode: number;
+    @SpeakeasyMetadata()
+    statusCode: number;
 
-  @SpeakeasyMetadata()
-  rawResponse?: AxiosResponse;
+    @SpeakeasyMetadata()
+    rawResponse?: AxiosResponse;
 }

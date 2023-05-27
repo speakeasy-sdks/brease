@@ -7,16 +7,16 @@ import { ModelsRule } from "./modelsrule";
 import { Expose, Type } from "class-transformer";
 
 export class EvaluateRulesInput extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  @Expose({ name: "object" })
-  object: Record<string, any>;
+    @SpeakeasyMetadata()
+    @Expose({ name: "object" })
+    object: Record<string, any>;
 
-  @SpeakeasyMetadata()
-  @Expose({ name: "overrideCode" })
-  overrideCode?: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "overrideCode" })
+    overrideCode?: string;
 
-  @SpeakeasyMetadata({ elemType: ModelsRule })
-  @Expose({ name: "overrideRules" })
-  @Type(() => ModelsRule)
-  overrideRules?: ModelsRule[];
+    @SpeakeasyMetadata({ elemType: ModelsRule })
+    @Expose({ name: "overrideRules" })
+    @Type(() => ModelsRule)
+    overrideRules?: ModelsRule[];
 }
