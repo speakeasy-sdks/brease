@@ -1,5 +1,6 @@
 contextid.go
 sdk.go
+.gitignore
 go.mod
 go.sum
 pkg/types/bigint.go
