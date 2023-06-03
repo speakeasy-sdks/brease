@@ -17,20 +17,10 @@ import java.nio.charset.StandardCharsets;
  */
 public class ContextID {
 	
-	private HTTPClient _defaultClient;
-	private HTTPClient _securityClient;
-	private String _serverUrl;
-	private String _language;
-	private String _sdkVersion;
-	private String _genVersion;
+	private SDKConfiguration sdkConfiguration;
 
-	public ContextID(HTTPClient defaultClient, HTTPClient securityClient, String serverUrl, String language, String sdkVersion, String genVersion) {
-		this._defaultClient = defaultClient;
-		this._securityClient = securityClient;
-		this._serverUrl = serverUrl;
-		this._language = language;
-		this._sdkVersion = sdkVersion;
-		this._genVersion = genVersion;
+	public ContextID(SDKConfiguration sdkConfiguration) {
+		this.sdkConfiguration = sdkConfiguration;
 	}
 
     /**
@@ -41,7 +31,7 @@ public class ContextID {
      * @throws Exception if the API call fails
      */
     public industries.dot.brease.models.operations.AddRuleResponse addRule(industries.dot.brease.models.operations.AddRuleRequest request, industries.dot.brease.models.operations.AddRuleSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = industries.dot.brease.utils.Utils.generateURL(industries.dot.brease.models.operations.AddRuleRequest.class, baseUrl, "/{contextID}/rules/add", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -51,9 +41,9 @@ public class ContextID {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -83,7 +73,7 @@ public class ContextID {
      * @throws Exception if the API call fails
      */
     public industries.dot.brease.models.operations.EvaluateRulesResponse evaluateRules(industries.dot.brease.models.operations.EvaluateRulesRequest request, industries.dot.brease.models.operations.EvaluateRulesSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = industries.dot.brease.utils.Utils.generateURL(industries.dot.brease.models.operations.EvaluateRulesRequest.class, baseUrl, "/{contextID}/evaluate", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -93,9 +83,9 @@ public class ContextID {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -125,7 +115,7 @@ public class ContextID {
      * @throws Exception if the API call fails
      */
     public industries.dot.brease.models.operations.GetAllRulesResponse getAllRules(industries.dot.brease.models.operations.GetAllRulesRequest request, industries.dot.brease.models.operations.GetAllRulesSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = industries.dot.brease.utils.Utils.generateURL(industries.dot.brease.models.operations.GetAllRulesRequest.class, baseUrl, "/{contextID}/rules", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -133,9 +123,9 @@ public class ContextID {
         req.setURL(url);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,7 +155,7 @@ public class ContextID {
      * @throws Exception if the API call fails
      */
     public industries.dot.brease.models.operations.RemoveRuleResponse removeRule(industries.dot.brease.models.operations.RemoveRuleRequest request, industries.dot.brease.models.operations.RemoveRuleSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = industries.dot.brease.utils.Utils.generateURL(industries.dot.brease.models.operations.RemoveRuleRequest.class, baseUrl, "/{contextID}/rules/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -173,9 +163,9 @@ public class ContextID {
         req.setURL(url);
 
         req.addHeader("Accept", "*/*");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -199,7 +189,7 @@ public class ContextID {
      * @throws Exception if the API call fails
      */
     public industries.dot.brease.models.operations.ReplaceRuleResponse replaceRule(industries.dot.brease.models.operations.ReplaceRuleRequest request, industries.dot.brease.models.operations.ReplaceRuleSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
+        String baseUrl = this.sdkConfiguration.serverUrl;
         String url = industries.dot.brease.utils.Utils.generateURL(industries.dot.brease.models.operations.ReplaceRuleRequest.class, baseUrl, "/{contextID}/rules/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
@@ -209,9 +199,9 @@ public class ContextID {
         req.setBody(serializedRequestBody);
 
         req.addHeader("Accept", "application/json");
-        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this._language, this._sdkVersion, this._genVersion));
+        req.addHeader("user-agent", String.format("speakeasy-sdk/%s %s %s", this.sdkConfiguration.language, this.sdkConfiguration.sdkVersion, this.sdkConfiguration.genVersion));
         
-        HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        HTTPClient client = industries.dot.brease.utils.Utils.configureSecurityClient(this.sdkConfiguration.defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

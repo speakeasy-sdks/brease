@@ -1,3 +1,4 @@
+lib/src/main/java/industries/dot/brease/SDKConfiguration.java
 lib/src/main/java/industries/dot/brease/ContextID.java
 lib/src/main/java/industries/dot/brease/SDK.java
 .gitattributes
