@@ -6,7 +6,7 @@ from .sdkconfiguration import SDKConfiguration
 from sdk import utils
 
 class SDK:
-    r"""Business rule engine as a service API spec."""
+    r"""brease API: Business rule engine as a service API spec."""
     context_id: ContextID
     r"""Rule domain context"""
 

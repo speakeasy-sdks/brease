@@ -2,7 +2,7 @@
 
 ## Overview
 
-Business rule engine as a service API spec.
+brease API: Business rule engine as a service API spec.
 
 ### Available Operations
 

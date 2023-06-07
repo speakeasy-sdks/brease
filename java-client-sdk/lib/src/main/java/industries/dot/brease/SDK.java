@@ -8,7 +8,7 @@ import industries.dot.brease.utils.HTTPClient;
 import industries.dot.brease.utils.SpeakeasyHTTPClient;
 
 /**
- * Business rule engine as a service API spec.
+ * brease API: Business rule engine as a service API spec.
  */
 public class SDK {
 	/**

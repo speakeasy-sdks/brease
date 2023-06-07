@@ -4,6 +4,7 @@ package sdk
 
 import (
 	"brease/pkg/utils"
+	"fmt"
 	"net/http"
 	"time"
 )
@@ -58,7 +59,7 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 	return ServerList[c.ServerIndex], nil
 }
 
-// SDK - Business rule engine as a service API spec.
+// SDK - brease API: Business rule engine as a service API spec.
 type SDK struct {
 	// ContextID - Rule domain context
 	ContextID *contextID
@@ -109,8 +110,8 @@ func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
 		sdkConfiguration: sdkConfiguration{
 			Language:   "go",
-			SDKVersion: "0.8.0",
-			GenVersion: "2.35.3",
+			SDKVersion: "0.7.1",
+			GenVersion: "2.35.9",
 		},
 	}
 	for _, opt := range opts {

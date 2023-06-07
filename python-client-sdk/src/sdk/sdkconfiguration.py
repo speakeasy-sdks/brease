@@ -3,6 +3,7 @@
 import requests
 from dataclasses import dataclass
 
+
 SERVERS = [
     'http://localhost:4400',
     # Development server
@@ -18,8 +19,8 @@ class SDKConfiguration:
     server_url: str = ''
     server_idx: int = 0
     language: str = 'python'
-    sdk_version: str = '1.3.0'
-    gen_version: str = '2.35.3'
+    sdk_version: str = '1.2.1'
+    gen_version: str = '2.35.9'
 
     def get_server_details(self) -> tuple[str, dict[str, str]]:
         if self.server_url:

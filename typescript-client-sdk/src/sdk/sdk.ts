@@ -46,8 +46,8 @@ export class SDKConfiguration {
     serverURL: string;
     serverDefaults: any;
     language = "typescript";
-    sdkVersion = "0.4.0";
-    genVersion = "2.35.3";
+    sdkVersion = "0.4.1";
+    genVersion = "2.35.9";
 
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -55,7 +55,7 @@ export class SDKConfiguration {
 }
 
 /**
- * Business rule engine as a service API spec.
+ * brease API: Business rule engine as a service API spec.
  */
 export class SDK {
     /**
