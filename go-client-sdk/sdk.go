@@ -44,11 +44,12 @@ type sdkConfiguration struct {
 	DefaultClient  HTTPClient
 	SecurityClient HTTPClient
 
-	ServerURL   string
-	ServerIndex int
-	Language    string
-	SDKVersion  string
-	GenVersion  string
+	ServerURL         string
+	ServerIndex       int
+	Language          string
+	OpenAPIDocVersion string
+	SDKVersion        string
+	GenVersion        string
 }
 
 func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
@@ -109,9 +110,10 @@ func WithClient(client HTTPClient) SDKOption {
 func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
 		sdkConfiguration: sdkConfiguration{
-			Language:   "go",
-			SDKVersion: "0.7.1",
-			GenVersion: "2.35.9",
+			Language:          "go",
+			OpenAPIDocVersion: "0.1.0",
+			SDKVersion:        "0.8.0",
+			GenVersion:        "2.37.0",
 		},
 	}
 	for _, opt := range opts {

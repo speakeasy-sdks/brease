@@ -41,7 +41,7 @@ func main() {
         },
         ContextID: "quo",
     }, operations.AddRuleSecurity{
-        APIToken: "YOUR_BEARER_TOKEN_HERE",
+        APIToken: "",
     })
     if err != nil {
         log.Fatal(err)

@@ -66,7 +66,7 @@ public class Application {
             }};            
 
             AddRuleResponse res = sdk.contextID.addRule(req, new AddRuleSecurity("recusandae") {{
-                apiToken = "YOUR_BEARER_TOKEN_HERE";
+                apiToken = "";
             }});
 
             if (res.apiAddRuleResponse != null) {
@@ -160,7 +160,7 @@ public class Application {
             }};            
 
             EvaluateRulesResponse res = sdk.contextID.evaluateRules(req, new EvaluateRulesSecurity("reiciendis") {{
-                apiToken = "YOUR_BEARER_TOKEN_HERE";
+                apiToken = "";
             }});
 
             if (res.apiEvaluateRulesResponse != null) {
@@ -196,7 +196,7 @@ public class Application {
             GetAllRulesRequest req = new GetAllRulesRequest("est");            
 
             GetAllRulesResponse res = sdk.contextID.getAllRules(req, new GetAllRulesSecurity("mollitia") {{
-                apiToken = "YOUR_BEARER_TOKEN_HERE";
+                apiToken = "";
             }});
 
             if (res.apiAllRulesResponse != null) {
@@ -232,7 +232,7 @@ public class Application {
             RemoveRuleRequest req = new RemoveRuleRequest("laborum", "dolores");            
 
             RemoveRuleResponse res = sdk.contextID.removeRule(req, new RemoveRuleSecurity("dolorem") {{
-                apiToken = "YOUR_BEARER_TOKEN_HERE";
+                apiToken = "";
             }});
 
             if (res.statusCode == 200) {
@@ -303,7 +303,7 @@ public class Application {
             }};            
 
             ReplaceRuleResponse res = sdk.contextID.replaceRule(req, new ReplaceRuleSecurity("architecto") {{
-                apiToken = "YOUR_BEARER_TOKEN_HERE";
+                apiToken = "";
             }});
 
             if (res.apiReplaceRuleResponse != null) {

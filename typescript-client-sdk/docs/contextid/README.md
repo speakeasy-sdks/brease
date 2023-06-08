@@ -73,7 +73,7 @@ sdk.contextID.addRule({
   },
   contextID: "explicabo",
 }, {
-  apiToken: "YOUR_BEARER_TOKEN_HERE",
+  apiToken: "",
 }).then((res: AddRuleResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -211,7 +211,7 @@ sdk.contextID.evaluateRules({
   },
   contextID: "eum",
 }, {
-  apiToken: "YOUR_BEARER_TOKEN_HERE",
+  apiToken: "",
 }).then((res: EvaluateRulesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -234,7 +234,7 @@ const sdk = new SDK();
 sdk.contextID.getAllRules({
   contextID: "dolor",
 }, {
-  apiToken: "YOUR_BEARER_TOKEN_HERE",
+  apiToken: "",
 }).then((res: GetAllRulesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -258,7 +258,7 @@ sdk.contextID.removeRule({
   contextID: "necessitatibus",
   id: "2516fe4c-8b71-41e5-b7fd-2ed028921cdd",
 }, {
-  apiToken: "YOUR_BEARER_TOKEN_HERE",
+  apiToken: "",
 }).then((res: RemoveRuleResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -304,7 +304,7 @@ sdk.contextID.replaceRule({
   contextID: "vero",
   id: "5fe9b90c-2890-49b3-be49-a8d9cbf48633",
 }, {
-  apiToken: "YOUR_BEARER_TOKEN_HERE",
+  apiToken: "",
 }).then((res: ReplaceRuleResponse) => {
   if (res.statusCode == 200) {
     // handle response

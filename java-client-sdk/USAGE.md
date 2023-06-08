@@ -50,7 +50,7 @@ public class Application {
             }};            
 
             AddRuleResponse res = sdk.contextID.addRule(req, new AddRuleSecurity("magnam") {{
-                apiToken = "YOUR_BEARER_TOKEN_HERE";
+                apiToken = "";
             }});
 
             if (res.apiAddRuleResponse != null) {

@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 14e7c80664b52eb481cd009ed4abfd0f
   docVersion: 0.1.0
-  speakeasyVersion: 1.44.2
-  generationVersion: 2.35.9
+  speakeasyVersion: 1.45.0
+  generationVersion: 2.37.0
 generation:
   sdkClassName: SDK
   singleTagPerOp: false
@@ -30,7 +30,7 @@ python:
   maxMethodParams: 0
   packageName: brease-sdk
 typescript:
-  version: 0.4.0
+  version: 0.5.0
   author: dotinc
   maxMethodParams: 0
   packageName: brease-sdk

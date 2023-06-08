@@ -74,7 +74,7 @@ req = operations.AddRuleRequest(
 )
 
 res = s.context_id.add_rule(req, operations.AddRuleSecurity(
-    api_token="YOUR_BEARER_TOKEN_HERE",
+    api_token="",
 ))
 
 if res.api_add_rule_response is not None:
@@ -212,7 +212,7 @@ req = operations.EvaluateRulesRequest(
 )
 
 res = s.context_id.evaluate_rules(req, operations.EvaluateRulesSecurity(
-    api_token="YOUR_BEARER_TOKEN_HERE",
+    api_token="",
 ))
 
 if res.api_evaluate_rules_response is not None:
@@ -236,7 +236,7 @@ req = operations.GetAllRulesRequest(
 )
 
 res = s.context_id.get_all_rules(req, operations.GetAllRulesSecurity(
-    api_token="YOUR_BEARER_TOKEN_HERE",
+    api_token="",
 ))
 
 if res.api_all_rules_response is not None:
@@ -261,7 +261,7 @@ req = operations.RemoveRuleRequest(
 )
 
 res = s.context_id.remove_rule(req, operations.RemoveRuleSecurity(
-    api_token="YOUR_BEARER_TOKEN_HERE",
+    api_token="",
 ))
 
 if res.status_code == 200:
@@ -307,7 +307,7 @@ req = operations.ReplaceRuleRequest(
 )
 
 res = s.context_id.replace_rule(req, operations.ReplaceRuleSecurity(
-    api_token="YOUR_BEARER_TOKEN_HERE",
+    api_token="",
 ))
 
 if res.api_replace_rule_response is not None:
