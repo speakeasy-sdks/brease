@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'industries.dot.brease:brease-sdk:0.3.0'
+implementation 'industries.dot.brease:brease-sdk:0.2.3'
 ```
 <!-- End SDK Installation -->
 
