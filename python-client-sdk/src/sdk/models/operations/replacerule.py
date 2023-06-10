@@ -8,26 +8,31 @@ from ..shared import replaceruleinput as shared_replaceruleinput
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ReplaceRuleSecurity:
-    
     api_token: str = dataclasses.field(metadata={'security': { 'scheme': True, 'type': 'http', 'sub_type': 'bearer', 'field_name': 'Authorization' }})
     
 
+
+
+
 @dataclasses.dataclass
 class ReplaceRuleRequest:
-    
     context_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'contextID', 'style': 'simple', 'explode': False }})
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     replace_rule_input: Optional[shared_replaceruleinput.ReplaceRuleInput] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
+
+
+
 @dataclasses.dataclass
 class ReplaceRuleResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     api_replace_rule_response: Optional[shared_apireplaceruleresponse.APIReplaceRuleResponse] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

@@ -9,29 +9,36 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ExpressionArrayExpression3:
-    
     condition: Optional[shared_condition.Condition] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('condition'), 'exclude': lambda f: f is None }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ExpressionArrayExpression2:
-    
     or_: Optional[ExpressionArray] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('or'), 'exclude': lambda f: f is None }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ExpressionArrayExpression1:
-    
     and_: Optional[ExpressionArray] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('and'), 'exclude': lambda f: f is None }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ExpressionArray:
-    
     expression: Optional[list[Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expression'), 'exclude': lambda f: f is None }})
     
+

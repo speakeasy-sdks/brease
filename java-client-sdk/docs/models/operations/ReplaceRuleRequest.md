@@ -1,0 +1,10 @@
+# ReplaceRuleRequest
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `replaceRuleInput`                                                                              | [industries.dot.brease.models.shared.ReplaceRuleInput](../../models/shared/ReplaceRuleInput.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `contextID`                                                                                     | *String*                                                                                        | :heavy_check_mark:                                                                              | N/A                                                                                             |
+| `id`                                                                                            | *String*                                                                                        | :heavy_check_mark:                                                                              | N/A                                                                                             |

@@ -9,10 +9,11 @@ from typing import Any, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EvaluateRulesInput:
-    
     object: dict[str, Any] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('object') }})
     override_code: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('overrideCode'), 'exclude': lambda f: f is None }})
     override_rules: Optional[list[shared_modelsrule.ModelsRule]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('overrideRules'), 'exclude': lambda f: f is None }})
     
+

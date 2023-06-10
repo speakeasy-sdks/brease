@@ -58,13 +58,13 @@ func main() {
 ## Available Resources and Operations
 
 
-### [ContextID](docs/contextid/README.md)
+### [ContextID](docs/sdks/contextid/README.md)
 
-* [AddRule](docs/contextid/README.md#addrule) - Adds a new rule to the context
-* [EvaluateRules](docs/contextid/README.md#evaluaterules) - Evaluate rules within a context on the provided object
-* [GetAllRules](docs/contextid/README.md#getallrules) - Returns all rules with the context
-* [RemoveRule](docs/contextid/README.md#removerule) - Removes a rule from the context
-* [ReplaceRule](docs/contextid/README.md#replacerule) - Replaces an existing rule within the context
+* [AddRule](docs/sdks/contextid/README.md#addrule) - Adds a new rule to the context
+* [EvaluateRules](docs/sdks/contextid/README.md#evaluaterules) - Evaluate rules within a context on the provided object
+* [GetAllRules](docs/sdks/contextid/README.md#getallrules) - Returns all rules with the context
+* [RemoveRule](docs/sdks/contextid/README.md#removerule) - Removes a rule from the context
+* [ReplaceRule](docs/sdks/contextid/README.md#replacerule) - Replaces an existing rule within the context
 <!-- End SDK Available Operations -->
 
 ### Maturity

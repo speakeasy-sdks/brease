@@ -65,13 +65,13 @@ sdk.contextID.addRule({
 ## Available Resources and Operations
 
 
-### [contextID](docs/contextid/README.md)
+### [contextID](docs/sdks/contextid/README.md)
 
-* [addRule](docs/contextid/README.md#addrule) - Adds a new rule to the context
-* [evaluateRules](docs/contextid/README.md#evaluaterules) - Evaluate rules within a context on the provided object
-* [getAllRules](docs/contextid/README.md#getallrules) - Returns all rules with the context
-* [removeRule](docs/contextid/README.md#removerule) - Removes a rule from the context
-* [replaceRule](docs/contextid/README.md#replacerule) - Replaces an existing rule within the context
+* [addRule](docs/sdks/contextid/README.md#addrule) - Adds a new rule to the context
+* [evaluateRules](docs/sdks/contextid/README.md#evaluaterules) - Evaluate rules within a context on the provided object
+* [getAllRules](docs/sdks/contextid/README.md#getallrules) - Returns all rules with the context
+* [removeRule](docs/sdks/contextid/README.md#removerule) - Removes a rule from the context
+* [replaceRule](docs/sdks/contextid/README.md#replacerule) - Replaces an existing rule within the context
 <!-- End SDK Available Operations -->
 
 ### Maturity
